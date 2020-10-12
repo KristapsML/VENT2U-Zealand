@@ -5,10 +5,7 @@ import { NgModule } from '@angular/core';
 // Message: To start with, I have just commented out the modules that were already here -
 // only keeping them here for example of how the modules should be added.
 
-import {
-//  MatButtonModule,
-//  MatToolbarModule
-} from '@angular/material';
+// Also! Remember to import the modules like the NgModule^ above
 
 @NgModule({
   imports: [
