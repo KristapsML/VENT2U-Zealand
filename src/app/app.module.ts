@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 // Importing HomeComponent to test routing - we can rename it according to our need
 import { HomeComponent } from './home/home.component';
+// Importing SliderComponent to experiment with sliders in app
+import { SliderComponent } from './slider/slider.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -17,7 +19,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
