@@ -27,11 +27,13 @@ import { InputWSubmitComponent } from './components/input-w-submit/input-w-submi
 import { PresetComponent } from './components/preset/preset.component';
 import { StartupTimeSuggestionComponent } from './components/startup-time-suggestion/startup-time-suggestion.component';
 import { AppSettingComponent } from './components/app-setting/app-setting.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -62,7 +64,8 @@ const routes: Routes = [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

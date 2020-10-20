@@ -1,45 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* ----- COLOR VARIABLES ----- */
+// Global CSS custom properties (variables)
+:root {
 
-/*
-Please use those main colors! (feel free to add the missing shades)
- If you need transparency, you can use this in rgba, e.g.:
- background-color: rgba($main-color-700,.5)
- */
+  /* ----- COLOR VARIABLES ----- */
 
-$main-color-700: #416A05;
-$main-color-500: #6EA81A; // Main color from Vent2U website
-$main-color-400: #9BBB6D;
-$main-color-300: #C5DEA0;
+  /*
+  These color variables are in RGB, so it's possible to add transparency to them.
+  - To use a color, put it in a rgb code, e.g.:
+  background-color: rgb(var(--main-color-500)).
+  - If you want to add opacity to it, use rgba and add the opacity, e.g.:
+  background-color: rgba(var(--main-color-500), .5).
+  */
 
-$secondary-color-500: #D5B56B;
+  --main-color-700: 65, 106, 5;
+  --main-color-500: 110, 168, 26; // Main color from Vent2U website
+  --main-color-400: 155, 187, 109;
+  --main-color-300: 197, 222, 160;
 
-$grey-900: #3A3A3A;
-$grey-800: #707070;
-$grey-200: #D6D6D6;
-$grey-100: #F3F3F3; // Main background color
+  --secondary-color-500: 213, 181, 107;
+
+  --grey-900: 58, 58, 58;
+  --grey-800: 112, 112, 112;
+  --grey-200: 214, 214, 214;
+  --grey-100: 243, 243, 243; // Main background color
 
 
-/* ----- FONT VARIABLES ----- */
+  /* ----- FONT VARIABLES ----- */
 
-/* Main font: Raleway
-https://fonts.google.com/specimen/Raleway?sidebar.open=true&selection.family=Raleway:ital,wght@0,400;0,500;0,700;1,400
-Our current styles: Regular 400, Regular 400 Italic, Medium 500, Bold 700 */
+  /* Main font: Raleway
+  https://fonts.google.com/specimen/Raleway?sidebar.open=true&selection.family=Raleway:ital,wght@0,400;0,500;0,700;1,400
+  Our current styles: Regular 400, Regular 400 Italic, Medium 500, Bold 700 */
+  --main-font-family: 'Raleway', sans-serif;
 
-$main-font-family: 'Raleway', sans-serif;
+
+  /* ----- OTHER STYLING VARIABLES ----- */
+
+  // Main margin/padding for the app
+  --main-margin: 12px;
+}
+
 
 /* ----- GENERAL STYLINGS ----- */
 
-.tester {
-  background-color: rgba($main-color-700, .5);
-  font-family: $main-font-family;
-}
-
 html, body {
-  height: 100%;
+  min-height: 100%;
+  margin: 0;
 }
 
-body {
-  margin: 0;
+app-root {
+  font-family: var(--main-font-family);
+}
+
+p,
+h1,
+h2,
+h3,
+a,
+button  {
+  font-family: inherit;
 }

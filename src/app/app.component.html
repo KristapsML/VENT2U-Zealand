@@ -1,7 +1,14 @@
+<app-top-nav></app-top-nav>
+
 <!--
 This is the outlet for what we link to in the router.
-It (currently) starts at with the home component, then shows what the user navigates to.
+If the URL doesn't contain a parameter (nothing after /), it will show the LoginComponent view, which is our first page.
+It then displays the views that the user navigates to.
 All static components that are (almost) always shown, such as the top/bottom fixed bars
 will be around this router outlet.
 -->
-<router-outlet></router-outlet>
+<div class="router-outlet-container">
+  <router-outlet></router-outlet>
+</div>
+
+<app-bottom-nav></app-bottom-nav>

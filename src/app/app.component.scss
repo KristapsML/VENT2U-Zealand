@@ -1,0 +1,17 @@
+app-top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+app-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.router-outlet-container {
+  margin: calc(56px + var(--main-margin)) var(--main-margin);
+}
