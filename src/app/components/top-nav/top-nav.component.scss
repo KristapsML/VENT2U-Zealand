@@ -1,0 +1,21 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--main-font-family);
+}
+
+.app_title {
+  font-weight: bold;
+  text-align: center;
+
+  &::first-letter {
+    color: rgb(var(--main-color-500));
+  }
+
+}
+
+.burger_icon_container {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
