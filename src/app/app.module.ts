@@ -31,9 +31,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // When no route is defined, the app will display the login page.
   { path: 'home', component: HomeComponent },
+  { path: 'current-settings', component: CurrentSettingsComponent },
+  { path: 'app-settings', component: AppSettingsComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'presets', component: PresetsComponent },
+  { path: 'select-spot', component: SelectSpotComponent },
+  { path: 'startup-overview', component: StartupOverviewComponent },
+  { path: 'startup-select-settings', component: StartupSelectSettingsComponent },
+  { path: 'startup-select-spot', component: StartupSelectSpotComponent },
+  { path: 'startup-select-time', component: StartupSelectTimeComponent }
 ];
 
 @NgModule({

@@ -11,4 +11,23 @@ will be around this router outlet.
   <router-outlet></router-outlet>
 </div>
 
+
+<!--
+This nav will be removed later, but use it for now to change between views.
+This is also the way you should use links throughout the whole app.
+ -->
+<nav>
+  <ul>
+    <li><a routerLink="/current-settings">Current settings</a></li>
+    <li><a routerLink="/app-settings">App settings</a></li>
+    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/presets">Presets</a></li>
+    <li><a routerLink="/select-spot">Select spot</a></li>
+    <li><a routerLink="/startup-overview">Startup overview</a></li>
+    <li><a routerLink="/startup-select-settings">Startup select settings</a></li>
+    <li><a routerLink="/startup-select-spot">Startup select spot</a></li>
+    <li><a routerLink="/startup-select-time">Startup select time</a></li>
+  </ul>
+</nav>
+
 <app-bottom-nav></app-bottom-nav>
