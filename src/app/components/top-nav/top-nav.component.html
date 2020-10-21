@@ -8,7 +8,9 @@
   </div>
 
   <div class="burger_icon_container flex_1">
-    <button mat-button [matMenuTriggerFor]="menu">
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="bars"
            class="svg-inline--fa fa-bars fa-w-14 icon_medium"
            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -25,7 +27,10 @@
 </mat-toolbar>
 
 <mat-menu #menu="matMenu" class="main_nav">
-  <button mat-menu-item>
+  <button
+    mat-menu-item
+    routerLink="/current-settings"
+  >
     <mat-icon>
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sliders-h"
            class="svg-inline--fa fa-sliders-h fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +46,11 @@
     </mat-icon>
     <span>Current settings</span>
   </button>
-  <button mat-menu-item>
+
+  <button
+    mat-menu-item
+    routerLink="/presets"
+  >
     <mat-icon>
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="tasks-alt"
            class="svg-inline--fa fa-tasks-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +66,11 @@
     </mat-icon>
     <span>Your presets</span>
   </button>
-  <button mat-menu-item>
+
+  <button
+    mat-menu-item
+    routerLink="/app-settings"
+  >
     <mat-icon>
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16"
            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -72,7 +85,10 @@
     </mat-icon>
     <span>App settings</span>
   </button>
-  <button mat-menu-item>
+  <button
+    mat-menu-item
+    routerLink="/tips-tricks"
+  >
     <mat-icon>
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="hands-helping"
            class="svg-inline--fa fa-hands-helping fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +104,10 @@
     </mat-icon>
     <span>Tips & Tricks</span>
   </button>
-  <button mat-menu-item>
+  <button
+    mat-menu-item
+    routerLink="about-vent2u"
+  >
     <mat-icon>
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="info-square"
            class="svg-inline--fa fa-info-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"

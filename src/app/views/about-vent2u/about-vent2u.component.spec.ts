@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavLiComponent } from './nav-li.component';
+import { AboutVent2uComponent } from './about-vent2u.component';
 
-describe('NavLiComponent', () => {
-  let component: NavLiComponent;
-  let fixture: ComponentFixture<NavLiComponent>;
+describe('AboutVent2uComponent', () => {
+  let component: AboutVent2uComponent;
+  let fixture: ComponentFixture<AboutVent2uComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavLiComponent ]
+      declarations: [ AboutVent2uComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavLiComponent);
+    fixture = TestBed.createComponent(AboutVent2uComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
