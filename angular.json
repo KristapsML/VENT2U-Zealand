@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./vent2u-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []

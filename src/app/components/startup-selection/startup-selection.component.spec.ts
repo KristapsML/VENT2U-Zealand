@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavLiComponent } from './nav-li.component';
+import { StartupSelectionComponent } from './startup-selection.component';
 
-describe('NavLiComponent', () => {
-  let component: NavLiComponent;
-  let fixture: ComponentFixture<NavLiComponent>;
+describe('StartupSelectionComponent', () => {
+  let component: StartupSelectionComponent;
+  let fixture: ComponentFixture<StartupSelectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavLiComponent ]
+      declarations: [ StartupSelectionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavLiComponent);
+    fixture = TestBed.createComponent(StartupSelectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

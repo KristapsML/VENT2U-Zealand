@@ -1,6 +1,4 @@
-<mat-toolbar
-  color="primary"
->
+<mat-toolbar>
   <div class="flex_1"></div>
 
   <div class="app_title flex_1">
@@ -8,7 +6,10 @@
   </div>
 
   <div class="burger_icon_container flex_1">
-    <button mat-button [matMenuTriggerFor]="menu">
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu">
+      <mat-icon color="primary">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="bars"
            class="svg-inline--fa fa-bars fa-w-14 icon_medium"
            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -20,13 +21,17 @@
                 d="M432 384H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 80v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16z"></path>
         </g>
       </svg>
+      </mat-icon>
     </button>
   </div>
 </mat-toolbar>
 
 <mat-menu #menu="matMenu" class="main_nav">
-  <button mat-menu-item>
-    <mat-icon>
+  <button
+    mat-menu-item
+    routerLink="/current-settings"
+  >
+    <mat-icon color="primary" color="primary">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sliders-h"
            class="svg-inline--fa fa-sliders-h fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 512 512">
@@ -41,8 +46,12 @@
     </mat-icon>
     <span>Current settings</span>
   </button>
-  <button mat-menu-item>
-    <mat-icon>
+
+  <button
+    mat-menu-item
+    routerLink="/presets"
+  >
+    <mat-icon color="primary">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="tasks-alt"
            class="svg-inline--fa fa-tasks-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 512 512">
@@ -57,8 +66,12 @@
     </mat-icon>
     <span>Your presets</span>
   </button>
-  <button mat-menu-item>
-    <mat-icon>
+
+  <button
+    mat-menu-item
+    routerLink="/app-settings"
+  >
+    <mat-icon color="primary">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16"
            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <g class="fa-group">
@@ -72,8 +85,11 @@
     </mat-icon>
     <span>App settings</span>
   </button>
-  <button mat-menu-item>
-    <mat-icon>
+  <button
+    mat-menu-item
+    routerLink="/tips-tricks"
+  >
+    <mat-icon color="primary">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="hands-helping"
            class="svg-inline--fa fa-hands-helping fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 640 512">
@@ -88,8 +104,11 @@
     </mat-icon>
     <span>Tips & Tricks</span>
   </button>
-  <button mat-menu-item>
-    <mat-icon>
+  <button
+    mat-menu-item
+    routerLink="about-vent2u"
+  >
+    <mat-icon color="primary">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="info-square"
            class="svg-inline--fa fa-info-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 448 512">
@@ -105,7 +124,7 @@
     <span>About Vent2U</span>
   </button>
   <button mat-menu-item class="logout_button">
-    <mat-icon>
+    <mat-icon color="primary">
       <svg style="transform: rotateY(180deg)" aria-hidden="true" focusable="false" data-prefix="fad"
            data-icon="sign-out" class="svg-inline--fa fa-sign-out fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 512 512">

@@ -18,8 +18,6 @@ import { CurrentSettingsComponent } from './views/current-settings/current-setti
 import { SelectSpotComponent } from './views/select-spot/select-spot.component';
 import { AppSettingsComponent } from './views/app-settings/app-settings.component';
 import { PresetsComponent } from './views/presets/presets.component';
-import { MainNavComponent } from './components/main-nav/main-nav.component';
-import { NavLiComponent } from './components/nav-li/nav-li.component';
 import { ModalWindowComponent } from './components/modal-window/modal-window.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
@@ -31,20 +29,25 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {UsersService} from './services/users.service';
 import {StandardPresetsService} from './services/standard-presets.service';
 import { ModalOpenerComponent } from './components/modal-opener/modal-opener.component';
+import { TipsTricksComponent } from './views/tips-tricks/tips-tricks.component';
+import { AboutVent2uComponent } from './views/about-vent2u/about-vent2u.component';
+import { StartupSelectionComponent } from './components/startup-selection/startup-selection.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // When no route is defined, the app will display the login page.
   { path: 'home', component: HomeComponent },
-  { path: 'current-settings', component: CurrentSettingsComponent },
+  { path: 'about-vent2u', component: AboutVent2uComponent },
   { path: 'app-settings', component: AppSettingsComponent },
+  { path: 'current-settings', component: CurrentSettingsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'presets', component: PresetsComponent },
   { path: 'select-spot', component: SelectSpotComponent },
   { path: 'startup-overview', component: StartupOverviewComponent },
   { path: 'startup-select-settings', component: StartupSelectSettingsComponent },
   { path: 'startup-select-spot', component: StartupSelectSpotComponent },
-  { path: 'startup-select-time', component: StartupSelectTimeComponent }
+  { path: 'startup-select-time', component: StartupSelectTimeComponent },
+  { path: 'tips-tricks', component: TipsTricksComponent }
 ];
 
 @NgModule({
@@ -61,8 +64,6 @@ const routes: Routes = [
     SelectSpotComponent,
     AppSettingsComponent,
     PresetsComponent,
-    MainNavComponent,
-    NavLiComponent,
     ModalWindowComponent,
     TopNavComponent,
     BottomNavComponent,
@@ -70,14 +71,16 @@ const routes: Routes = [
     PresetComponent,
     StartupTimeSuggestionComponent,
     AppSettingComponent,
-    ModalOpenerComponent
+    ModalOpenerComponent,
+    TipsTricksComponent,
+    AboutVent2uComponent,
+    StartupSelectionComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
-    MatToolbarModule
+    RouterModule.forRoot(routes)
   ],
   providers: [
     UsersService,
