@@ -46,19 +46,11 @@
 html, body {
   min-height: 100%;
   margin: 0;
+  background-color: whitesmoke;
 }
 
 app-root {
   font-family: var(--main-font-family);
-}
-
-p,
-h1,
-h2,
-h3,
-a,
-button  {
-  font-family: inherit;
 }
 
 .flex_1 {

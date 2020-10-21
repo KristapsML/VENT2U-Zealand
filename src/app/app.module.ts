@@ -31,6 +31,7 @@ import {StandardPresetsService} from './services/standard-presets.service';
 import { ModalOpenerComponent } from './components/modal-opener/modal-opener.component';
 import { TipsTricksComponent } from './views/tips-tricks/tips-tricks.component';
 import { AboutVent2uComponent } from './views/about-vent2u/about-vent2u.component';
+import { StartupSelectionComponent } from './components/startup-selection/startup-selection.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -72,14 +73,14 @@ const routes: Routes = [
     AppSettingComponent,
     ModalOpenerComponent,
     TipsTricksComponent,
-    AboutVent2uComponent
+    AboutVent2uComponent,
+    StartupSelectionComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
-    MatToolbarModule
+    RouterModule.forRoot(routes)
   ],
   providers: [
     UsersService,
