@@ -28,7 +28,6 @@ import { PresetComponent } from './components/preset/preset.component';
 import { StartupTimeSuggestionComponent } from './components/startup-time-suggestion/startup-time-suggestion.component';
 import { AppSettingComponent } from './components/app-setting/app-setting.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {OpenDialogService} from './services/open-dialog.service';
 import {UsersService} from './services/users.service';
 import {StandardPresetsService} from './services/standard-presets.service';
 import { ModalOpenerComponent } from './components/modal-opener/modal-opener.component';
@@ -82,8 +81,7 @@ const routes: Routes = [
   ],
   providers: [
     UsersService,
-    StandardPresetsService,
-    OpenDialogService
+    StandardPresetsService
   ],
   bootstrap: [AppComponent]
 })

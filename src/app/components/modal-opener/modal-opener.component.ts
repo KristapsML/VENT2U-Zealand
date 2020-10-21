@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {MainNavComponent} from '../main-nav/main-nav.component';
+import {ModalWindowComponent} from '../modal-window/modal-window.component';
 
 @Component({
   selector: 'app-modal-opener',
@@ -13,7 +14,7 @@ export class ModalOpenerComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(MainNavComponent);
+    this.dialog.open(ModalWindowComponent);
   }
 
   ngOnInit(): void {
