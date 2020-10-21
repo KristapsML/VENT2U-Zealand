@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
 // This module should contain all our imports for Material modules.
 
 // Importing slider module to experiment with customizability
-import { MatSliderModule } from '@angular/material/slider';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatButton, MatButtonModule} from '@angular/material/button';
 
 // Message: To start with, I have just commented out the modules that were already here -
 // only keeping them here for example of how the modules should be added.
@@ -14,12 +16,17 @@ import { MatSliderModule } from '@angular/material/slider';
   imports: [
 //    MatButtonModule,
 //    MatToolbarModule
-      MatSliderModule
+    MatSliderModule,
+    MatDialogModule,
+    MatButtonModule,
   ],
   exports: [
 //    MatButtonModule,
 //    MatToolbarModule
-      MatSliderModule
+    MatSliderModule,
+    MatDialogModule,
+    MatButtonModule
   ]
 })
-export class MaterialModule {}
+export class MaterialModule {
+}

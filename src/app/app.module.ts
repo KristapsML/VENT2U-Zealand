@@ -28,6 +28,10 @@ import { PresetComponent } from './components/preset/preset.component';
 import { StartupTimeSuggestionComponent } from './components/startup-time-suggestion/startup-time-suggestion.component';
 import { AppSettingComponent } from './components/app-setting/app-setting.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {OpenDialogService} from './services/open-dialog.service';
+import {UsersService} from './services/users.service';
+import {StandardPresetsService} from './services/standard-presets.service';
+import { ModalOpenerComponent } from './components/modal-opener/modal-opener.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -66,7 +70,8 @@ const routes: Routes = [
     InputWSubmitComponent,
     PresetComponent,
     StartupTimeSuggestionComponent,
-    AppSettingComponent
+    AppSettingComponent,
+    ModalOpenerComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +80,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    UsersService,
+    StandardPresetsService,
+    OpenDialogService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
