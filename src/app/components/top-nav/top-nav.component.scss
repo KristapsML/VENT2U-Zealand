@@ -2,7 +2,7 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   //font-family: var(--main-font-family);
-  box-shadow: 0 3px 6px rgba(100, 100, 100, 0.16), 0 3px 6px rgba(100,100,100,0.23);
+  box-shadow: var(--main-box-shadow);
 }
 
 .app_title {
