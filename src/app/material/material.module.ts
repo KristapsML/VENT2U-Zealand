@@ -6,6 +6,8 @@ import {NgModule} from '@angular/core';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButton, MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 // Message: To start with, I have just commented out the modules that were already here -
 // only keeping them here for example of how the modules should be added.
@@ -19,13 +21,17 @@ import {MatButton, MatButtonModule} from '@angular/material/button';
     MatSliderModule,
     MatDialogModule,
     MatButtonModule,
+    MatMenuModule,
+    MatIconModule
   ],
   exports: [
 //    MatButtonModule,
 //    MatToolbarModule
     MatSliderModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule
   ]
 })
 export class MaterialModule {
