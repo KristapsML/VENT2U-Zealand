@@ -7,13 +7,16 @@
 @include mat-core();
 
 $vent-green: (
-  100: rgb(197, 222, 160),
   500: rgb(110, 168, 26),
-  700: rgb(65, 106, 5),
   contrast: (
-    100: $black-87-opacity,
     500: white,
-    700: white,
+  )
+);
+
+$vent-orange: (
+  500: rgb(213, 181, 107),
+  contrast: (
+    500: white,
   )
 );
 
@@ -22,7 +25,7 @@ $vent-green: (
 $vent2u-theme: mat-light-theme((
   color: (
     primary: mat-palette($vent-green),
-    accent: mat-palette($mat-orange, A200, A100, A400),
+    accent: mat-palette($vent-orange),
     warn: mat-palette($mat-red),
   )
 ));
