@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainNavComponent } from './main-nav.component';
+import { ModalOpenerComponent } from './modal-opener.component';
 
-describe('MainNavComponent', () => {
-  let component: MainNavComponent;
-  let fixture: ComponentFixture<MainNavComponent>;
+describe('ModalOpenerComponent', () => {
+  let component: ModalOpenerComponent;
+  let fixture: ComponentFixture<ModalOpenerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainNavComponent ]
+      declarations: [ ModalOpenerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainNavComponent);
+    fixture = TestBed.createComponent(ModalOpenerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

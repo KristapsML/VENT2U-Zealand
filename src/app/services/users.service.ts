@@ -1,4 +1,4 @@
-export class ProductService {
+export class UsersService {
   getUsers() {
     return [
       {

@@ -1,4 +1,4 @@
-export class ProductService {
+export class StandardPresetsService {
   getStandardPresets() {
     return [
       {

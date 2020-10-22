@@ -1,7 +1,8 @@
 mat-toolbar {
   display: flex;
   justify-content: space-between;
-  font-family: var(--main-font-family);
+  //font-family: var(--main-font-family);
+  box-shadow: var(--main-box-shadow);
 }
 
 .app_title {
@@ -17,5 +18,9 @@ mat-toolbar {
 .burger_icon_container {
   display: flex;
   justify-content: flex-end;
-  color: white;
+  color: rgb(var(--main-color-700));
+}
+
+.logout_button {
+  margin-top: 48px;
 }

@@ -2,6 +2,7 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   font-family: var(--main-font-family);
+  box-shadow: var(--main-box-shadow-revert);
 }
 
 .back_button {
