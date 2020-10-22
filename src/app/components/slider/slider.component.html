@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 <!-- Adding the slider and customizing it with ticks and tracking the slider's values-->
 <div>
     <div class="sliderValue">Temperature: {{sliderTemperature.value}}°</div>
     <div class="current">Current temperature: 25°</div>
     <mat-slider
         #sliderTemperature (change)="updateSetting($event)"
-        tickInterval="5" 
-        step="1" 
-        min="0" 
-        max="40" 
+        tickInterval="5"
+        step="1"
+        min="0"
+        max="40"
         [value]="sliderTemperature">
     </mat-slider>
 </div>
@@ -18,14 +17,13 @@
     <div class="current">Current humidity: 37%</div>
     <mat-slider
         #sliderHumidity (change)="updateSetting($event)"
-        tickInterval="5" 
-        step="1" 
-        min="0" 
-        max="100" 
+        tickInterval="5"
+        step="1"
+        min="0"
+        max="100"
         [value]="sliderHumidity">
     </mat-slider>
 </div>
-=======
+
 <!-- Adding the slider and customizing it with thumbLabel, ticks and arbitrary values for examplification-->
 <mat-slider thumbLabel tickInterval="1" min="0" max="10" step="1" value="0"></mat-slider>
->>>>>>> b192abe3c565e3be7131a22652703d41f49eb441
