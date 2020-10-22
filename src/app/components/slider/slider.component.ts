@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -7,10 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class SliderComponent implements OnInit {
+  sliderTemperature = 40;
+  sliderHumidity = 100;
+  updateSetting(event) {
+    this.sliderTemperature = event.value;
+    this.sliderHumidity = event.value;
+  }
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

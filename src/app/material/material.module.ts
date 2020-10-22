@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 // Importing slider module to experiment with customizability
 import { MatSliderModule } from '@angular/material/slider';
 
+
 // Message: To start with, I have just commented out the modules that were already here -
 // only keeping them here for example of how the modules should be added.
 

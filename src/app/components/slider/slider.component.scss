@@ -1,3 +1,12 @@
 mat-slider {
     width: 300px;
   }
+
+.sliderValue {
+    font-size: 16px;
+}
+
+.current {
+    font-size: 14px;
+    opacity: 60%;
+}
