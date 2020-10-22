@@ -1,19 +1,21 @@
 <mat-card>
 
-  <div class="flex_1">
+  <div
+    class="card_icon flex_1"
+  >
   <ng-content select=".card_icon"></ng-content>
   </div>
 
-  <div class="flex_1">
-  <h4>
+  <div class="card_text_container flex_3">
+  <div class="card_small_text_container">
     <ng-content select=".card_small_text"></ng-content>
-  </h4>
-
-  <h3>
-    <ng-content select=".card_large_text"></ng-content>
-  </h3>
   </div>
 
-  <div  class="flex_1"></div>
+  <div class="card_large_text_container">
+    <ng-content select=".card_large_text"></ng-content>
+  </div>
+  </div>
+
+  <div class="flex_1"></div>
 
 </mat-card>

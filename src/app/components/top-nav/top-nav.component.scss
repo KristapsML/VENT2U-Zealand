@@ -18,7 +18,7 @@ mat-toolbar {
 .burger_icon_container {
   display: flex;
   justify-content: flex-end;
-  color: white;
+  color: rgb(var(--main-color-700));
 }
 
 .logout_button {

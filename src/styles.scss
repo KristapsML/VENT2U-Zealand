@@ -63,7 +63,20 @@ app-root {
   flex: 1;
 }
 
+.flex_2 {
+  flex: 2;
+}
+
+.flex_3 {
+  flex: 3;
+}
+
 .icon_medium {
   height: 25px;
   width: 25px;
+}
+
+.icon_large {
+  max-width: 45px;
+  width: fit-content;
 }
