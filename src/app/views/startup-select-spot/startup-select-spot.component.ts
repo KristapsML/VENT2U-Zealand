@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {ModalWindowComponent} from '../../components/modal-window/modal-window.component';
 import {StartupSelectSpotModalComponent} from './startup-select-spot-modal/startup-select-spot-modal.component';
 
 @Component({

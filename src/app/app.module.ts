@@ -25,15 +25,14 @@ import { InputWSubmitComponent } from './components/input-w-submit/input-w-submi
 import { PresetComponent } from './components/preset/preset.component';
 import { StartupTimeSuggestionComponent } from './components/startup-time-suggestion/startup-time-suggestion.component';
 import { AppSettingComponent } from './components/app-setting/app-setting.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
 import {UsersService} from './services/users.service';
 import {StandardPresetsService} from './services/standard-presets.service';
-import { ModalOpenerComponent } from './components/modal-opener/modal-opener.component';
 import { TipsTricksComponent } from './views/tips-tricks/tips-tricks.component';
 import { AboutVent2uComponent } from './views/about-vent2u/about-vent2u.component';
 import { StartupSelectionComponent } from './components/startup-selection/startup-selection.component';
 import { SettingOverviewComponent } from './components/setting-overview/setting-overview.component';
 import { StartupSelectSpotModalComponent } from './views/startup-select-spot/startup-select-spot-modal/startup-select-spot-modal.component';
+import { StartupSelectSettingsModalComponent } from './views/startup-select-settings/startup-select-settings-modal/startup-select-settings-modal.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -73,12 +72,12 @@ const routes: Routes = [
     PresetComponent,
     StartupTimeSuggestionComponent,
     AppSettingComponent,
-    ModalOpenerComponent,
     TipsTricksComponent,
     AboutVent2uComponent,
     StartupSelectionComponent,
     SettingOverviewComponent,
-    StartupSelectSpotModalComponent
+    StartupSelectSpotModalComponent,
+    StartupSelectSettingsModalComponent
   ],
   imports: [
     BrowserModule,
