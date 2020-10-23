@@ -37,8 +37,16 @@ import {InputWSubmitButtonComponent} from './components/input-w-submit-button/in
 import {ReactiveFormsModule} from '@angular/forms';
 import { LeaveSpotModalComponent } from './components/top-nav/leave-spot-modal/leave-spot-modal.component';
 import { LogOutModalComponent } from './components/top-nav/log-out-modal/log-out-modal.component';
-import {LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { LoginInfoModalComponent } from './views/login/login-info-modal/login-info-modal.component';
+import { StartupSelectSpotInfoModalComponent } from './views/startup-select-spot/startup-select-spot-info-modal/startup-select-spot-info-modal.component';
+import { StartupSelectSettingsInfoModalComponent } from './views/startup-select-settings/startup-select-settings-info-modal/startup-select-settings-info-modal.component';
+import { ComingSoonModalComponent } from './components/coming-soon-modal/coming-soon-modal.component';
+import { StartupSelectTimeInfoModalComponent } from './views/startup-select-time/startup-select-time-info-modal/startup-select-time-info-modal.component';
+import { StartupOverviewInfoModalComponent } from './views/startup-overview/startup-overview-info-modal/startup-overview-info-modal.component';
+import { CurrentSettingsInfoModalComponent } from './views/current-settings/current-settings-info-modal/current-settings-info-modal.component';
+import { PresetsInfoModalComponent } from './views/presets/presets-info-modal/presets-info-modal.component';
+import { AppSettingsInfoModalComponent } from './views/app-settings/app-settings-info-modal/app-settings-info-modal.component';
+import { SelectSpotInfoModalComponent } from './views/select-spot/select-spot-info-modal/select-spot-info-modal.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -87,7 +95,16 @@ const routes: Routes = [
     InputWSubmitButtonComponent,
     LeaveSpotModalComponent,
     LogOutModalComponent,
-    LoginInfoModalComponent
+    LoginInfoModalComponent,
+    StartupSelectSpotInfoModalComponent,
+    StartupSelectSettingsInfoModalComponent,
+    ComingSoonModalComponent,
+    StartupSelectTimeInfoModalComponent,
+    StartupOverviewInfoModalComponent,
+    CurrentSettingsInfoModalComponent,
+    PresetsInfoModalComponent,
+    AppSettingsInfoModalComponent,
+    SelectSpotInfoModalComponent
   ],
   imports: [
     BrowserModule,
