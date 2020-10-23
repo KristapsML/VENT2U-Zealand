@@ -69,8 +69,16 @@ app-root {
   overflow: visible !important;
 }
 
+.mat-form-field {
+  width: 100%;
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.align_right {
+  text-align: right;
 }
 
 .flex_1 {
