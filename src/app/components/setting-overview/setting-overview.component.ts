@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {StartupSelectSpotModalComponent} from '../../views/startup-select-spot/startup-select-spot-modal/startup-select-spot-modal.component';
 
 @Component({
   selector: 'app-setting-overview',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingOverviewComponent implements OnInit {
 
+
   constructor() { }
+
+  @Input() props: {
+    routerDest: string
+  };
 
   ngOnInit(): void {
   }
