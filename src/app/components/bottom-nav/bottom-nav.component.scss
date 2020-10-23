@@ -5,7 +5,8 @@ mat-toolbar {
   padding: 0;
 }
 
-.back_button {
+.back_button,
+.info_button {
   display: flex;
   justify-content: flex-start;
   color: rgb(var(--secondary-color-500));

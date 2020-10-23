@@ -38,6 +38,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { LeaveSpotModalComponent } from './components/top-nav/leave-spot-modal/leave-spot-modal.component';
 import { LogOutModalComponent } from './components/top-nav/log-out-modal/log-out-modal.component';
 import {LocationStrategy, PathLocationStrategy} from '@angular/common';
+import { LoginInfoModalComponent } from './views/login/login-info-modal/login-info-modal.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -85,7 +86,8 @@ const routes: Routes = [
     StartupSelectSettingsModalComponent,
     InputWSubmitButtonComponent,
     LeaveSpotModalComponent,
-    LogOutModalComponent
+    LogOutModalComponent,
+    LoginInfoModalComponent
   ],
   imports: [
     BrowserModule,

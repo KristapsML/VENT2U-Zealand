@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
+import {MatDialog} from '@angular/material/dialog';
+import {StartupSelectSpotModalComponent} from '../../views/startup-select-spot/startup-select-spot-modal/startup-select-spot-modal.component';
+import {LoginInfoModalComponent} from '../../views/login/login-info-modal/login-info-modal.component';
 
 @Component({
   selector: 'app-bottom-nav',
@@ -10,10 +13,12 @@ import {Router} from '@angular/router';
 export class BottomNavComponent implements OnInit {
 
   displayBackButton = true;
+  routerPath = '';
 
   constructor(
     private location: Location,
-    private router: Router) {
+    private router: Router,
+    public dialog: MatDialog) {
   }
 
   previousPage() {
@@ -25,7 +30,21 @@ export class BottomNavComponent implements OnInit {
     this.router.events.subscribe(event => {
       // Checking if the back button should be displayed
       this.displayBackButton = this.location.path() !== '/login';
+      this.routerPath = this.location.path();
     });
+  }
+
+  openDialog() {
+    console.log(this.routerPath);
+
+    if (this.routerPath === '/login') {
+      this.dialog.open(LoginInfoModalComponent);
+    }
+    if (this.routerPath === '/startup-select-spot') {
+      this.dialog.open(StartupSelectSpotModalComponent);
+    } else {
+      console.log('No modal component added for this view');
+    }
   }
 
 }
