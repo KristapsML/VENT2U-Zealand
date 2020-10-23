@@ -1,0 +1,25 @@
+.setting_overview {
+  display: flex;
+  margin-bottom: var(--main-margin);
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.setting_icon {
+  color: rgb(var(--main-color-500));
+}
+
+.setting_text {
+  margin: 0 var(--main-margin);
+}
+
+
+.edit_button {
+  border: none;
+  background-color: transparent;
+  color: rgb(var(--main-color-700));
+}

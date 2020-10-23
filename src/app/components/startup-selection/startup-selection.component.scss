@@ -1,7 +1,7 @@
 mat-card {
   display: flex;
 
-  margin-bottom: var(--main-margin);
+  margin-bottom: calc(var(--main-margin) / 2);
 
   div {
     margin: 0 6px;

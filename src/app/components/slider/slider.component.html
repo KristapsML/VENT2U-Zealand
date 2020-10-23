@@ -4,10 +4,10 @@
     <div class="current">Current temperature: 25°</div>
     <mat-slider
         #sliderTemperature (change)="updateSetting($event)"
-        tickInterval="5" 
-        step="1" 
-        min="0" 
-        max="40" 
+        tickInterval="5"
+        step="1"
+        min="0"
+        max="40"
         [value]="sliderTemperature">
     </mat-slider>
     <mat-checkbox>
@@ -20,10 +20,10 @@
     <div class="current">Current humidity: 37%</div>
     <mat-slider
         #sliderHumidity (change)="updateSetting($event)"
-        tickInterval="5" 
-        step="1" 
-        min="0" 
-        max="100" 
+        tickInterval="5"
+        step="1"
+        min="0"
+        max="100"
         [value]="sliderHumidity">
     </mat-slider>
     <mat-checkbox>
