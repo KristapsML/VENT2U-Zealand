@@ -35,6 +35,8 @@ import {StartupSelectSpotModalComponent} from './views/startup-select-spot/start
 import {StartupSelectSettingsModalComponent} from './views/startup-select-settings/startup-select-settings-modal/startup-select-settings-modal.component';
 import {InputWSubmitButtonComponent} from './components/input-w-submit-button/input-w-submit-button.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { LeaveSpotModalComponent } from './components/top-nav/leave-spot-modal/leave-spot-modal.component';
+import { LogOutModalComponent } from './components/top-nav/log-out-modal/log-out-modal.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -80,7 +82,9 @@ const routes: Routes = [
     SettingOverviewComponent,
     StartupSelectSpotModalComponent,
     StartupSelectSettingsModalComponent,
-    InputWSubmitButtonComponent
+    InputWSubmitButtonComponent,
+    LeaveSpotModalComponent,
+    LogOutModalComponent
   ],
   imports: [
     BrowserModule,

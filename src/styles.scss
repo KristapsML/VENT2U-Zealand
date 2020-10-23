@@ -36,8 +36,8 @@
 
   /* ----- BOX SHADOWS ----- */
 
-  --main-box-shadow: 0 3px 6px rgba(100, 100, 100, 0.16), 0 3px 6px rgba(100,100,100,0.23);
-  --main-box-shadow-revert: 0 -3px 6px rgba(100, 100, 100, 0.16), 0 -3px 6px rgba(100,100,100,0.23);
+  --main-box-shadow: 0 3px 6px rgba(100, 100, 100, 0.16), 0 3px 6px rgba(100, 100, 100, 0.23);
+  --main-box-shadow-revert: 0 -3px 6px rgba(100, 100, 100, 0.16), 0 -3px 6px rgba(100, 100, 100, 0.23);
 
 
   /* ----- OTHER STYLING VARIABLES ----- */
@@ -100,7 +100,7 @@ app-root {
 .grid_2_col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: calc(var(--main-margin)/2)
+  grid-gap: calc(var(--main-margin) / 2)
 }
 
 .icon_small {
