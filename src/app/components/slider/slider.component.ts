@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class SliderComponent implements OnInit {
   sliderTemperature = 40;
   sliderHumidity = 100;
+  sliderAirflow = 10;
   updateSetting(event) {
     this.sliderTemperature = event.value;
     this.sliderHumidity = event.value;
+    this.sliderAirflow = event.value;
   }
 
   constructor() { }
