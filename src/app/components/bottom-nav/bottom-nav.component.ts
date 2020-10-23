@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-bottom-nav',
@@ -8,15 +9,23 @@ import { Location } from '@angular/common';
 })
 export class BottomNavComponent implements OnInit {
 
-  constructor(private _location: Location)
-  {}
+  displayBackButton = true;
+
+  constructor(
+    private location: Location,
+    private router: Router) {
+  }
 
   previousPage() {
     console.log('Going back');
-    this._location.back();
+    this.location.back();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      // Checking if the back button should be displayed
+      this.displayBackButton = this.location.path() !== '/login';
+    });
   }
 
 }

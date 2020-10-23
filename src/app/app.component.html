@@ -1,4 +1,6 @@
-<app-top-nav></app-top-nav>
+<!-- Top nav does not show on the login page.
+More pages can be added in app.component.ts -->
+<app-top-nav *ngIf="displayTopNav"></app-top-nav>
 
 <!--
 This is the outlet for what we link to in the router.
