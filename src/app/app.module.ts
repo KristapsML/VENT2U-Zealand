@@ -33,6 +33,7 @@ import { TipsTricksComponent } from './views/tips-tricks/tips-tricks.component';
 import { AboutVent2uComponent } from './views/about-vent2u/about-vent2u.component';
 import { StartupSelectionComponent } from './components/startup-selection/startup-selection.component';
 import { SettingOverviewComponent } from './components/setting-overview/setting-overview.component';
+import { StartupSelectSpotModalComponent } from './views/startup-select-spot/startup-select-spot-modal/startup-select-spot-modal.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -76,7 +77,8 @@ const routes: Routes = [
     TipsTricksComponent,
     AboutVent2uComponent,
     StartupSelectionComponent,
-    SettingOverviewComponent
+    SettingOverviewComponent,
+    StartupSelectSpotModalComponent
   ],
   imports: [
     BrowserModule,

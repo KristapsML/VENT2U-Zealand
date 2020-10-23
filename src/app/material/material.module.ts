@@ -9,6 +9,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 // Remember to import the modules like the NgModule^ above
 
@@ -20,7 +22,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatSliderModule,
@@ -29,7 +33,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule {
