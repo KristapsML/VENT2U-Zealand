@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-bottom-nav',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BottomNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _location: Location)
+  {}
+
+  previousPage() {
+    console.log('Going back');
+    this._location.back();
+  }
 
   ngOnInit(): void {
   }
