@@ -12,6 +12,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatRippleModule} from '@angular/material/core';
 
@@ -29,6 +30,8 @@ import {MatRippleModule} from '@angular/material/core';
     MatFormFieldModule,
     MatCheckboxModule,
     MatInputModule,
+    MatSelectModule,
+    MatInputModule,
     MatSlideToggleModule,
     MatRippleModule
   ],
@@ -42,6 +45,8 @@ import {MatRippleModule} from '@angular/material/core';
     MatToolbarModule,
     MatFormFieldModule,
     MatCheckboxModule,
+    MatInputModule,
+    MatSelectModule,
     MatInputModule,
     MatSlideToggleModule,
     MatRippleModule

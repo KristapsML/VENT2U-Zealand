@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { SelectSpotPinModalComponent } from './select-spot-pin-modal/select-spot-pin-modal.component';
+import { SelectSpotQrModalComponent } from './select-spot-qr-modal/select-spot-qr-modal.component';
 
 @Component({
   selector: 'app-select-spot',
@@ -7,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectSpotComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {
+  }
+
+  openDialogPin() {
+    this.dialog.open(SelectSpotPinModalComponent);
+  }
+
+  openDialogQR() {
+    this.dialog.open(SelectSpotQrModalComponent);
+  }
 
   ngOnInit(): void {
   }

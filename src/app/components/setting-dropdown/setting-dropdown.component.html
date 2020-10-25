@@ -1,0 +1,10 @@
+<div>
+    <mat-form-field>
+        <mat-optgroup *ngFor="let group of presetsGroups" [label]="group.name"
+                  [disabled]="group.disabled">
+      <mat-option *ngFor="let preset of group.presets" [value]="presets.value">
+        {{presets.viewValue}}
+      </mat-option>
+    </mat-optgroup>
+    </mat-form-field>
+</div>
