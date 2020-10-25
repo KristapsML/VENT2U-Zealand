@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Vent2u"
+  "defaultProject": "Vent2u",
+  "cli": {
+    "analytics": false
+  }
 }
