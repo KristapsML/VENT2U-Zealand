@@ -1,5 +1,6 @@
 <mat-card
   matRipple
+  *ngIf="props"
   (click)="this.displaySettings = !this.displaySettings"
   [class.selected_preset]="props.preset.selected"
 >
