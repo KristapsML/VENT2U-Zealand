@@ -89,11 +89,7 @@ const routes: Routes = [
     StandardPresetsService
   ],
   bootstrap: [AppComponent],
-<<<<<<< HEAD
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
-=======
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
->>>>>>> d4f72ffb4cd15aa775d0402a9e55679dd9a2ce74
 })
 export class AppModule {
 }
