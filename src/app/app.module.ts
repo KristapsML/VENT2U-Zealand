@@ -47,6 +47,10 @@ import { CurrentSettingsInfoModalComponent } from './views/current-settings/curr
 import { PresetsInfoModalComponent } from './views/presets/presets-info-modal/presets-info-modal.component';
 import { AppSettingsInfoModalComponent } from './views/app-settings/app-settings-info-modal/app-settings-info-modal.component';
 import { SelectSpotInfoModalComponent } from './views/select-spot/select-spot-info-modal/select-spot-info-modal.component';
+import { SelectSpotPinModalComponent } from './views/select-spot/select-spot-pin-modal/select-spot-pin-modal.component';
+import { SelectSpotQrModalComponent } from './views/select-spot/select-spot-qr-modal/select-spot-qr-modal.component';
+import { MatButtonModule } from '@angular/material/button';
+import { SelectSpotQrReaderComponent } from './components/select-spot-qr-reader/select-spot-qr-reader.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -104,14 +108,18 @@ const routes: Routes = [
     CurrentSettingsInfoModalComponent,
     PresetsInfoModalComponent,
     AppSettingsInfoModalComponent,
-    SelectSpotInfoModalComponent
+    SelectSpotInfoModalComponent,
+    SelectSpotPinModalComponent,
+    SelectSpotQrModalComponent,
+    SelectSpotQrReaderComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   providers: [
     UsersService,
