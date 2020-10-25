@@ -59,6 +59,11 @@ app-root {
   font-family: var(--main-font-family);
 }
 
+hr {
+  margin: calc(var(--main-margin)*2) 0;
+  border: 1px solid rgba(var(--main-color-400), 0.5)
+}
+
 .dialog_heading {
   font-size: 16px;
   font-weight: 700;

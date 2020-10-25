@@ -1,0 +1,17 @@
+mat-card {
+  background-color: rgb(var(--main-color-300));
+  margin-bottom: calc(var(--main-margin)/2);
+}
+
+.selected_preset {
+  background-color: rgb(var(--main-color-400));
+}
+
+.preset_settings {
+  margin-top: var(--main-margin);
+  padding-bottom: calc(var(--main-margin)/2);
+}
+
+.select_button {
+  margin-top: calc(var(--main-margin)*2);
+}

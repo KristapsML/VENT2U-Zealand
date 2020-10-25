@@ -1,2 +1,54 @@
-<app-preset></app-preset>
+<h1>Presets</h1>
 
+<h2>My presets</h2>
+
+<app-preset
+  [props]="{
+preset: {
+title: 'Amazon feeling',
+category: 'myPresets',
+selected: true
+}
+  }"
+></app-preset>
+
+<app-preset
+  [props]="{
+preset: {
+title: 'My cold settings',
+category: 'myPresets',
+selected: false
+}
+  }"
+></app-preset>
+
+<h2>System presets</h2>
+<app-preset
+  [props]="{
+preset: {
+title: 'This room',
+category: 'systemPreset',
+selected: false
+}
+  }"
+></app-preset>
+
+<app-preset
+  [props]="{
+preset: {
+title: 'Cold + humid',
+category: 'systemPreset',
+selected: false
+}
+  }"
+></app-preset>
+
+<app-preset
+  [props]="{
+preset: {
+title: 'Quick warm up',
+category: 'systemPreset',
+selected: false
+}
+  }"
+></app-preset>

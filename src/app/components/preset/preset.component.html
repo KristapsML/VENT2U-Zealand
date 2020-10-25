@@ -1,1 +1,46 @@
-<p>preset works!</p>
+<mat-card
+  matRipple
+  (click)="this.displaySettings = !this.displaySettings"
+  [class.selected_preset]="props.preset.selected"
+>
+  <div
+    class="preset_title"
+  >
+    {{ props.preset.title }}
+  </div>
+
+  <div
+    *ngIf="displaySettings"
+    class="preset_settings"
+  >
+  <app-slider
+  class="preset_settings"
+  >
+  </app-slider>
+
+  <button
+    *ngIf="!props.preset.selected"
+    mat-raised-button
+    class="full_width uppercase select_button"
+    color="primary"
+    routerLink="/current-settings"
+  >
+    Select this preset
+  </button>
+
+    <hr
+      *ngIf="!props.preset.selected  && props.preset.category === 'myPresets'"
+    >
+
+    <button
+      *ngIf="!props.preset.selected && props.preset.category === 'myPresets'"
+      mat-button
+      class="full_width uppercase"
+      color="primary"
+    >
+      Delete preset
+    </button>
+
+  </div>
+
+</mat-card>

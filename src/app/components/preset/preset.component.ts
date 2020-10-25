@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-preset',
@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class PresetComponent implements OnInit {
 
   constructor() { }
+
+  displaySettings = false;
+
+  @Input() props: {
+    preset: object
+  };
 
   ngOnInit(): void {
   }
