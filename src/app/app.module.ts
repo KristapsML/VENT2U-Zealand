@@ -47,6 +47,7 @@ import { CurrentSettingsInfoModalComponent } from './views/current-settings/curr
 import { PresetsInfoModalComponent } from './views/presets/presets-info-modal/presets-info-modal.component';
 import { AppSettingsInfoModalComponent } from './views/app-settings/app-settings-info-modal/app-settings-info-modal.component';
 import { SelectSpotInfoModalComponent } from './views/select-spot/select-spot-info-modal/select-spot-info-modal.component';
+import { SettingDropdownComponent } from './components/setting-dropdown/setting-dropdown.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -104,7 +105,8 @@ const routes: Routes = [
     CurrentSettingsInfoModalComponent,
     PresetsInfoModalComponent,
     AppSettingsInfoModalComponent,
-    SelectSpotInfoModalComponent
+    SelectSpotInfoModalComponent,
+    SettingDropdownComponent
   ],
   imports: [
     BrowserModule,
