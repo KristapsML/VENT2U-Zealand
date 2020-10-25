@@ -1,1 +1,17 @@
+.app_title {
+  font-weight: bold;
+  text-align: center;
 
+  &::first-letter {
+    color: rgb(var(--main-color-500));
+  }
+
+  padding-bottom: 5%;
+  font-size: 3rem;
+}
+
+.log-in-btn {
+  background-color: #6ea81a;
+  color: #ffffff;
+  text-transform: uppercase;
+}
