@@ -49,28 +49,28 @@ export class BottomNavComponent implements OnInit {
     if (this.routerPath === '/login') {
       this.dialog.open(LoginInfoModalComponent);
     }
-    if (this.routerPath === '/startup-select-spot') {
+    else if (this.routerPath === '/startup-select-spot') {
       this.dialog.open(StartupSelectSpotInfoModalComponent);
     }
-    if (this.routerPath === '/startup-select-settings') {
+    else if (this.routerPath === '/startup-select-settings') {
       this.dialog.open(StartupSelectSettingsInfoModalComponent);
     }
-    if (this.routerPath === '/startup-select-time') {
+    else if (this.routerPath === '/startup-select-time') {
       this.dialog.open(StartupSelectTimeInfoModalComponent);
     }
-    if (this.routerPath === '/startup-overview') {
+    else if (this.routerPath === '/startup-overview') {
       this.dialog.open(StartupOverviewInfoModalComponent);
     }
-    if (this.routerPath === '/current-settings') {
+    else if (this.routerPath === '/current-settings') {
       this.dialog.open(CurrentSettingsInfoModalComponent);
     }
-    if (this.routerPath === '/presets') {
+    else if (this.routerPath === '/presets') {
       this.dialog.open(PresetsInfoModalComponent);
     }
-    if (this.routerPath === '/app-settings') {
+    else if (this.routerPath === '/app-settings') {
       this.dialog.open(AppSettingsInfoModalComponent);
     }
-    if (this.routerPath === '/select-spot') {
+    else if (this.routerPath === '/select-spot') {
       this.dialog.open(SelectSpotInfoModalComponent);
     }
     else {

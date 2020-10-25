@@ -12,6 +12,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 // Remember to import the modules like the NgModule^ above
 
@@ -26,7 +27,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatSlideToggleModule
   ],
   exports: [
     MatSliderModule,
@@ -38,7 +40,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatSlideToggleModule
   ]
 })
 
