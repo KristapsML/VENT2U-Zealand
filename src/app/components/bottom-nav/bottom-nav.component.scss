@@ -1,16 +1,16 @@
 mat-toolbar {
   display: flex;
   justify-content: space-between;
-  font-family: var(--main-font-family);
   box-shadow: var(--main-box-shadow-revert);
+  padding: 0;
 }
 
-.back_button {
+.back_button,
+.info_button {
   display: flex;
   justify-content: flex-start;
   color: rgb(var(--secondary-color-500));
 }
-
 
 .info_button {
   display: flex;

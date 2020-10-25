@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+
+<mat-form-field class="example-full-width">
+  <mat-label>{{ props.inputLabel }}</mat-label>
+  <textarea
+    matInput
+    class="form-control"
+    formControlName="timeInput"
+    placeholder="{{ props.placeholder }}"
+  ></textarea>
+</mat-form-field>
+
+  <div class="align_right">
+  <button
+    mat-raised-button
+    *ngIf="form.controls.timeInput.valid"
+    class="uppercase"
+    color="primary"
+    routerLink="{{ props.routerDest }}"
+  >
+    {{ props.buttonText }}
+  </button>
+  </div>
+
+</form>

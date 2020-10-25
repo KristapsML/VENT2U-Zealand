@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
 
 // Remember to import the modules like the NgModule^ above
 
@@ -24,7 +25,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatCardModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ],
   exports: [
     MatSliderModule,
@@ -35,8 +37,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatCardModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ]
 })
+
 export class MaterialModule {
 }

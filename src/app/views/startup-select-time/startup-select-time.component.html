@@ -29,3 +29,13 @@
   </app-startup-time-suggestion>
 
 </div>
+
+<app-input-w-submit-button
+  class="input_time"
+  [props]="{
+  inputLabel: 'Another time',
+  placeholder: 'Insert another time',
+  buttonText: 'Save time',
+  routerDest: '/startup-overview'
+  }"
+></app-input-w-submit-button>

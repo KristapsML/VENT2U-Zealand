@@ -36,8 +36,8 @@
 
   /* ----- BOX SHADOWS ----- */
 
-  --main-box-shadow: 0 3px 6px rgba(100, 100, 100, 0.16), 0 3px 6px rgba(100,100,100,0.23);
-  --main-box-shadow-revert: 0 -3px 6px rgba(100, 100, 100, 0.16), 0 -3px 6px rgba(100,100,100,0.23);
+  --main-box-shadow: 0 3px 6px rgba(100, 100, 100, 0.16), 0 3px 6px rgba(100, 100, 100, 0.23);
+  --main-box-shadow-revert: 0 -3px 6px rgba(100, 100, 100, 0.16), 0 -3px 6px rgba(100, 100, 100, 0.23);
 
 
   /* ----- OTHER STYLING VARIABLES ----- */
@@ -59,8 +59,26 @@ app-root {
   font-family: var(--main-font-family);
 }
 
+.dialog_heading {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mat-dialog-content {
+  overflow: visible !important;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.align_right {
+  text-align: right;
 }
 
 .flex_1 {
@@ -82,7 +100,7 @@ app-root {
 .grid_2_col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: calc(var(--main-margin)/2)
+  grid-gap: calc(var(--main-margin) / 2)
 }
 
 .icon_small {

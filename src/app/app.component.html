@@ -1,4 +1,6 @@
-<app-top-nav></app-top-nav>
+<!-- Top nav does not show on the login page.
+More pages can be added in app.component.ts -->
+<app-top-nav *ngIf="displayTopNav"></app-top-nav>
 
 <!--
 This is the outlet for what we link to in the router.
@@ -11,19 +13,4 @@ will be around this router outlet.
   <router-outlet></router-outlet>
 </div>
 
-
-<!--
-This nav will be removed later, but use it for now to change between views.
-This is also the way you should use links throughout the whole app.
-<nav>
-  <ul>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/select-spot">Select spot</a></li>
-    <li><a routerLink="/startup-overview">Startup overview</a></li>
-    <li><a routerLink="/startup-select-settings">Startup select settings</a></li>
-    <li><a routerLink="/startup-select-spot">Startup select spot</a></li>
-    <li><a routerLink="/startup-select-time">Startup select time</a></li>
-  </ul>
-</nav>
- -->
 <app-bottom-nav></app-bottom-nav>

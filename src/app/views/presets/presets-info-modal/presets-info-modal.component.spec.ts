@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalOpenerComponent } from './modal-opener.component';
+import { PresetsInfoModalComponent } from './presets-info-modal.component';
 
-describe('ModalOpenerComponent', () => {
-  let component: ModalOpenerComponent;
-  let fixture: ComponentFixture<ModalOpenerComponent>;
+describe('PresetsInfoModalComponent', () => {
+  let component: PresetsInfoModalComponent;
+  let fixture: ComponentFixture<PresetsInfoModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalOpenerComponent ]
+      declarations: [ PresetsInfoModalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalOpenerComponent);
+    fixture = TestBed.createComponent(PresetsInfoModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
