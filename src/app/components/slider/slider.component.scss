@@ -10,3 +10,7 @@ mat-slider {
     font-size: 14px;
     opacity: 60%;
 }
+
+.slider {
+  margin-bottom: calc(var(--main-margin)*2);
+}

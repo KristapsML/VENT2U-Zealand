@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -7,7 +7,10 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class SliderComponent implements OnInit {
-  sliderTemperature = 40;
+
+  keepAtRoomLevel = null;
+
+  sliderTemperature = 35;
   sliderHumidity = 100;
   sliderAirflow = 10;
   updateSetting(event) {
@@ -16,8 +19,24 @@ export class SliderComponent implements OnInit {
     this.sliderAirflow = event.value;
   }
 
+  @Input() props: {
+    title: string,
+    interval: number,
+    step: number,
+    tempMin: number,
+    tempMax: number,
+    keepAtRoomLevel: boolean
+  };
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+      this.keepAtRoomLevel = this.props.keepAtRoomLevel;
+      console.log(this.keepAtRoomLevel);
+  }
+
+  disableSlider() {
+    this.keepAtRoomLevel = !this.keepAtRoomLevel;
+    console.log(this.keepAtRoomLevel);
   }
 }
