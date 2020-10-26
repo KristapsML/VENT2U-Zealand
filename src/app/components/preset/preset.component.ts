@@ -23,7 +23,8 @@ export class PresetComponent implements OnInit {
     this.dialog.open(PresetDeleteModalComponent);
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log(this.props.lastDest);
   }
 
 }

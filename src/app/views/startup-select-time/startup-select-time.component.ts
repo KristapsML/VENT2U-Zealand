@@ -21,7 +21,7 @@ export class StartupSelectTimeComponent implements OnInit {
     console.log(this.lastDest);
 
 
-    if (this.lastDest === '/startup-select-settings') {
+    if (this.lastDest === '/startup-select-settings' || this.lastDest === '/presets') {
       this.routerDest = '/startup-overview';
     } else {
       this.routerDest = '/current-settings';
