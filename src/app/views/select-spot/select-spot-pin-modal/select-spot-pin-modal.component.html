@@ -2,15 +2,23 @@
     Connect to your unit with a Pin code
 </div>
 <div mat-dialog-content>
-    <mat-form-field>
-        <mat-label>Enter Pin Code</mat-label>
-        <input matInput placeholder="Pin Code" type="number">
-    </mat-form-field>
+    <!-- <mat-form-field>
+        <mat-label>Enter Spot ID</mat-label>
+        <input matInput placeholder="Spot ID" type="number">
+    </mat-form-field> -->
+
+    <app-input-w-submit-button [props]="{
+        inputLabel: 'Spot ID',
+        placeholder: 'Enter Spot ID',
+        buttonText: 'Confirm',
+        routerDest: '/startup-select-time'
+        }">
+    </app-input-w-submit-button>
 
 
-    <div mat-dialog-actions align="end">
+    <!-- <div mat-dialog-actions align="end">
         <button mat-button mat-dialog-close class="uppercase" color="primary">
         OK!
       </button>
-    </div>
+</div> -->
 </div>
