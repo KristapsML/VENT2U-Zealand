@@ -8,7 +8,7 @@
     Current {{props.title}}: {{ props.currentRoomValue }}{{props.unit}}
   </div>
   <mat-slider
-    [disabled]="this.keepAtRoomLevel"
+    [disabled]="this.keepAtRoomLevel || props.preview"
       #sliderTemperature (change)="updateSetting($event)"
       tickInterval="{{ props.interval }}"
       step="{{ props.step }}"
@@ -17,8 +17,7 @@
       [value]="props.currentValue">
   </mat-slider>
   <mat-checkbox
-    [checked]="this.keepAtRoomLevel"
-  (click)="disableSlider()">
+    [(ngModel)]="this.keepAtRoomLevel">
     Keep at room level
   </mat-checkbox>
 </div>

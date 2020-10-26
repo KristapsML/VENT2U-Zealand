@@ -24,7 +24,6 @@ export class PresetComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // console.log(this.props.lastDest);
   }
 
 }

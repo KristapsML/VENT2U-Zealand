@@ -33,7 +33,7 @@ import {SettingOverviewComponent} from './components/setting-overview/setting-ov
 import {StartupSelectSpotModalComponent} from './views/startup-select-spot/startup-select-spot-modal/startup-select-spot-modal.component';
 import {StartupSelectSettingsModalComponent} from './views/startup-select-settings/startup-select-settings-modal/startup-select-settings-modal.component';
 import {InputWSubmitButtonComponent} from './components/input-w-submit-button/input-w-submit-button.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LeaveSpotModalComponent } from './components/top-nav/leave-spot-modal/leave-spot-modal.component';
 import { LogOutModalComponent } from './components/top-nav/log-out-modal/log-out-modal.component';
 import { LoginInfoModalComponent } from './views/login/login-info-modal/login-info-modal.component';
@@ -122,7 +122,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   providers: [
     UsersService,

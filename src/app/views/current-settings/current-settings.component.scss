@@ -1,0 +1,20 @@
+.leaving_time {
+  display: flex;
+  margin: calc(var(--main-margin)*2) 0;
+
+  div {
+    display: flex;
+  }
+
+}
+
+.setting_text {
+  margin-right: var(--main-margin);
+}
+
+
+.edit_button {
+  border: none;
+  background-color: transparent;
+  color: rgb(var(--main-color-700));
+}

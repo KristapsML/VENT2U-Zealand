@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {ComingSoonModalComponent} from '../../components/coming-soon-modal/coming-soon-modal.component';
 
 @Component({
   selector: 'app-current-settings',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current-settings.component.scss']
 })
 export class CurrentSettingsComponent implements OnInit {
+  constructor(public dialog: MatDialog) {
+  }
 
-  constructor() { }
+  openDialog() {
+    this.dialog.open(ComingSoonModalComponent);
+  }
 
   ngOnInit(): void {
   }
