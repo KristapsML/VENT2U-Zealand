@@ -13,11 +13,21 @@
 ></app-slider>
 <app-slider
   [props]="{
-  title: 'temperature',
-  interval: 5,
+  title: 'humidity',
+  interval: 10,
   step: 1,
-  tempMin: 10,
-  tempMax: 35,
+  tempMin: 0,
+  tempMax: 100,
+  keepAtRoomLevel: true
+  }"
+></app-slider>
+<app-slider
+  [props]="{
+  title: 'airflow level',
+  interval: 1,
+  step: 1,
+  tempMin: 0,
+  tempMax: 10,
   keepAtRoomLevel: true
   }"
 ></app-slider>

@@ -10,7 +10,7 @@ export class SliderComponent implements OnInit {
 
   keepAtRoomLevel = null;
 
-  sliderTemperature = 40;
+  sliderTemperature = 35;
   sliderHumidity = 100;
   sliderAirflow = 10;
   updateSetting(event) {
