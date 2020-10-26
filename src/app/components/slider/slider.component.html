@@ -3,7 +3,7 @@
   <div class="sliderValue">{{ props.title }} {{sliderTemperature.value}}°</div>
   <div class="current">Current {{props.title}}: 25°</div>
   <mat-slider
-    [disabled]="props.keepAtRoomLevel"
+    [disabled]="this.keepAtRoomLevel"
       #sliderTemperature (change)="updateSetting($event)"
       tickInterval="{{ props.interval }}"
       step="{{ props.step }}"
@@ -11,7 +11,9 @@
       max="{{ props.tempMax }}"
       [value]="15">
   </mat-slider>
-  <mat-checkbox [checked]="props.keepAtRoomLevel">
+  <mat-checkbox
+    [checked]="this.keepAtRoomLevel"
+  (click)="disableSlider()">
     Keep at room level
   </mat-checkbox>
 </div>

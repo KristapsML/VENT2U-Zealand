@@ -7,6 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 
 export class SliderComponent implements OnInit {
+
+  keepAtRoomLevel = null;
+
   sliderTemperature = 40;
   sliderHumidity = 100;
   sliderAirflow = 10;
@@ -27,6 +30,13 @@ export class SliderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+      this.keepAtRoomLevel = this.props.keepAtRoomLevel;
+      console.log(this.keepAtRoomLevel);
+  }
+
+  disableSlider() {
+    this.keepAtRoomLevel = !this.keepAtRoomLevel;
+    console.log(this.keepAtRoomLevel);
   }
 }
