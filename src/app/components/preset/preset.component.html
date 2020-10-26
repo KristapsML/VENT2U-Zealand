@@ -15,19 +15,43 @@
     class="preset_settings"
   >
   <app-slider
+    [props]="{
+  title: 'temperature',
+  interval: 5,
+  step: 1,
+  tempMin: 10,
+  tempMax: 35,
+  keepAtRoomLevel: true
+  }"
   class="preset_settings"
   >
   </app-slider>
 
-  <button
-    *ngIf="!props.preset.selected"
-    mat-raised-button
-    class="full_width uppercase select_button"
-    color="primary"
-    routerLink="/current-settings"
-  >
-    Select this preset
-  </button>
+    <i
+      *ngIf="props.preset.selected"
+      >
+      This is your current preset.
+    </i>
+
+    <button
+      *ngIf="!props.preset.selected && props.lastDest === '/startup-select-settings'"
+      mat-raised-button
+      class="full_width uppercase select_button"
+      color="primary"
+      routerLink="/startup-select-time"
+    >
+      Select this preset
+    </button>
+
+    <button
+      *ngIf="!props.preset.selected && props.lastDest !== '/startup-select-settings'"
+      mat-raised-button
+      class="full_width uppercase select_button"
+      color="primary"
+      routerLink="/current-settings"
+    >
+      Select this preset
+    </button>
 
     <hr
       *ngIf="!props.preset.selected  && props.preset.category === 'myPresets'"
@@ -35,6 +59,7 @@
 
     <button
       *ngIf="!props.preset.selected && props.preset.category === 'myPresets'"
+      (click)="openDialog()"
       mat-button
       class="full_width uppercase"
       color="primary"

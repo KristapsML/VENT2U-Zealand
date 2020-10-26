@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Location} from '@angular/common';
+import {Router} from '@angular/router';
+import { PreviousRouteService } from '../../services/previous-route.service';
 
 @Component({
   selector: 'app-presets',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresetsComponent implements OnInit {
 
-  constructor() { }
+  lastDest: string;
 
-  ngOnInit(): void {
+  constructor(
+    private previousRouteService: PreviousRouteService,
+    private location: Location,
+    private router: Router) {
+  }
+
+  ngOnInit() {
+    this.lastDest = this.previousRouteService.getPreviousUrl();
+    console.log(this.lastDest);
   }
 
 }

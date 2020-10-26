@@ -18,7 +18,6 @@ import {CurrentSettingsComponent} from './views/current-settings/current-setting
 import {SelectSpotComponent} from './views/select-spot/select-spot.component';
 import {AppSettingsComponent} from './views/app-settings/app-settings.component';
 import {PresetsComponent} from './views/presets/presets.component';
-import {ModalWindowComponent} from './components/modal-window/modal-window.component';
 import {TopNavComponent} from './components/top-nav/top-nav.component';
 import {BottomNavComponent} from './components/bottom-nav/bottom-nav.component';
 import {InputWSubmitComponent} from './components/input-w-submit/input-w-submit.component';
@@ -52,6 +51,8 @@ import { SelectSpotPinModalComponent } from './views/select-spot/select-spot-pin
 import { SelectSpotQrModalComponent } from './views/select-spot/select-spot-qr-modal/select-spot-qr-modal.component';
 import { MatButtonModule } from '@angular/material/button';
 import { SelectSpotQrReaderComponent } from './components/select-spot-qr-reader/select-spot-qr-reader.component';
+import { PresetDeleteModalComponent } from './components/preset/preset-delete-modal/preset-delete-modal.component';
+import {PreviousRouteService} from './services/previous-route.service';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
@@ -84,7 +85,6 @@ const routes: Routes = [
     SelectSpotComponent,
     AppSettingsComponent,
     PresetsComponent,
-    ModalWindowComponent,
     TopNavComponent,
     BottomNavComponent,
     InputWSubmitComponent,
@@ -113,7 +113,8 @@ const routes: Routes = [
     SettingDropdownComponent,
     SelectSpotPinModalComponent,
     SelectSpotQrModalComponent,
-    SelectSpotQrReaderComponent
+    SelectSpotQrReaderComponent,
+    PresetDeleteModalComponent
   ],
   imports: [
     BrowserModule,
@@ -125,10 +126,12 @@ const routes: Routes = [
   ],
   providers: [
     UsersService,
-    StandardPresetsService
+    StandardPresetsService,
+    PreviousRouteService
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
+  constructor(private routerExtService: PreviousRouteService){}
 }
