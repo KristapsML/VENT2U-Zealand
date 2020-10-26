@@ -1,2 +1,13 @@
-<app-setting-dropdown></app-setting-dropdown>
-<app-slider></app-slider>
+<h1>Your spot: 3-17-2</h1>
+
+<!--<app-setting-dropdown></app-setting-dropdown>-->
+<app-slider
+  [props]="{
+  title: 'temperature',
+  interval: 5,
+  step: 1,
+  tempMin: 10,
+  tempMax: 35,
+  keepAtRoomLevel: false
+  }"
+></app-slider>
