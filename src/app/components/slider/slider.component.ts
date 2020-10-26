@@ -21,11 +21,15 @@ export class SliderComponent implements OnInit {
 
   @Input() props: {
     title: string,
+    unit: string,
     interval: number,
     step: number,
     tempMin: number,
     tempMax: number,
-    keepAtRoomLevel: boolean
+    keepAtRoomLevel: boolean,
+    currentValue: number,
+    currentRoomValue: number,
+    preview: boolean
   };
 
   constructor() { }

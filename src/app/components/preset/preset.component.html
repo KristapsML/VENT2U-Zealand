@@ -14,18 +14,49 @@
     *ngIf="displaySettings"
     class="preset_settings"
   >
-  <app-slider
-    [props]="{
+    <app-slider
+      [props]="{
   title: 'temperature',
+  unit: '&deg;',
   interval: 5,
   step: 1,
   tempMin: 10,
   tempMax: 35,
-  keepAtRoomLevel: true
+  keepAtRoomLevel: false,
+  currentValue: 27,
+  currentRoomValue: 22,
+  preview: true
   }"
-  class="preset_settings"
-  >
-  </app-slider>
+    ></app-slider>
+    <app-slider
+      [props]="{
+  title: 'humidity',
+  unit: '%',
+  interval: 10,
+  step: 1,
+  tempMin: 0,
+  tempMax: 100,
+  keepAtRoomLevel: false,
+  currentValue: 45,
+  currentRoomValue: 37,
+  preview: true
+  }"
+    ></app-slider>
+    <app-slider
+      [props]="{
+  title: 'airflow level',
+  unit: '',
+  interval: 1,
+  step: 1,
+  tempMin: 0,
+  tempMax: 10,
+  keepAtRoomLevel: true,
+  currentValue: 7,
+  currentRoomValue: 5,
+  preview: true
+  }"
+    ></app-slider>
+
 
     <i
       *ngIf="props.preset.selected"

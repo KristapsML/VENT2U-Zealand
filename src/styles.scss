@@ -82,6 +82,10 @@ hr {
   text-transform: uppercase;
 }
 
+.capitalize::first-letter {
+  text-transform: capitalize;
+}
+
 .align_right {
   text-align: right;
 }

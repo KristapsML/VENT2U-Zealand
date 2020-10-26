@@ -4,30 +4,42 @@
 <app-slider
   [props]="{
   title: 'temperature',
+  unit: '&deg;',
   interval: 5,
   step: 1,
   tempMin: 10,
   tempMax: 35,
-  keepAtRoomLevel: true
+  keepAtRoomLevel: false,
+  currentValue: 27,
+  currentRoomValue: 22,
+  preview: false
   }"
 ></app-slider>
 <app-slider
   [props]="{
   title: 'humidity',
+  unit: '%',
   interval: 10,
   step: 1,
   tempMin: 0,
   tempMax: 100,
-  keepAtRoomLevel: true
+  keepAtRoomLevel: false,
+  currentValue: 45,
+  currentRoomValue: 37,
+  preview: false
   }"
 ></app-slider>
 <app-slider
   [props]="{
   title: 'airflow level',
+  unit: '',
   interval: 1,
   step: 1,
   tempMin: 0,
   tempMax: 10,
-  keepAtRoomLevel: true
+  keepAtRoomLevel: true,
+  currentValue: 7,
+  currentRoomValue: 5,
+  preview: false
   }"
 ></app-slider>
