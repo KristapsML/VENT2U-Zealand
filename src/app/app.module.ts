@@ -56,7 +56,6 @@ import {PreviousRouteService} from './services/previous-route.service';
 
 // This holds the route definitions - If the path is empty it will redirect to the home component
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full'}, // When no route is defined, the app will display the login page.
   {path: 'home', component: HomeComponent},
   {path: 'about-vent2u', component: AboutVent2uComponent},
   {path: 'app-settings', component: AppSettingsComponent},
@@ -68,7 +67,8 @@ const routes: Routes = [
   {path: 'startup-select-settings', component: StartupSelectSettingsComponent},
   {path: 'startup-select-spot', component: StartupSelectSpotComponent},
   {path: 'startup-select-time', component: StartupSelectTimeComponent},
-  {path: 'tips-tricks', component: TipsTricksComponent}
+  {path: 'tips-tricks', component: TipsTricksComponent},
+  {path: '**', redirectTo: '/login'} // When no route is defined, the app will display the login page.
 ];
 
 @NgModule({
