@@ -1,5 +1,5 @@
 app-top-nav {
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@ app-top-nav {
 }
 
 app-bottom-nav {
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   bottom: 0;
   left: 0;
