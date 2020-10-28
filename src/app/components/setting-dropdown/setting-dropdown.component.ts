@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 interface Presets {
   value: string;
@@ -17,9 +17,10 @@ interface PresetsGroup {
   templateUrl: './setting-dropdown.component.html',
   styleUrls: ['./setting-dropdown.component.scss']
 })
+
 export class SettingDropdownComponent {
 
-  presetControl = new FormControl();
+  presetsControl = new FormControl();
   presetsGroups: PresetsGroup[] = [
     {
       name: 'Your presets',
