@@ -1,11 +1,11 @@
 <mat-card>
     <mat-form-field appearance="none">
-      <mat-select placeholder="Select preset" [formControl]="presetsControl">
+      <mat-select placeholder="Amazon feeling" [formControl]="presetsControl">
         <mat-optgroup *ngFor="let group of presetsGroups" [label]="group.name"
                   [disabled]="group.disabled">
-      <mat-option *ngFor="let presets of group.presets" [value]="presets.value">
-        {{presets.viewValue}}
-      </mat-option>
+          <mat-option *ngFor="let presets of group.presets" [value]="presets.value">
+            {{presets.viewValue}}
+          </mat-option>
         </mat-optgroup>
       </mat-select>
     </mat-form-field>

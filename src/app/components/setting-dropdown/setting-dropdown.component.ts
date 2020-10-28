@@ -20,12 +20,13 @@ interface PresetsGroup {
 
 export class SettingDropdownComponent {
 
+  selectedItem: string;
   presetsControl = new FormControl();
   presetsGroups: PresetsGroup[] = [
     {
       name: 'Your presets',
       presets: [
-        {value: 'amazon-feeling', viewValue: 'Amazon Feeling'},
+        {value: 'amazon-feeling', viewValue: 'Amazon feeling'},
         {value: 'my-cold-settings', viewValue: 'My cold settings'}
       ]
     },
@@ -38,4 +39,5 @@ export class SettingDropdownComponent {
       ]
     }
   ];
+
 }
