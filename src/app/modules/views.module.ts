@@ -1,10 +1,6 @@
 import {NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// This module should contain all our imports for Material modules.
-
-import {MatSliderModule} from '@angular/material/slider';
-import {SliderComponent} from '../components/slider/slider.component';
 import {LoginComponent} from '../views/login/login.component';
 import {StartupSelectSpotComponent} from '../views/startup-select-spot/startup-select-spot.component';
 import {StartupSelectSettingsComponent} from '../views/startup-select-settings/startup-select-settings.component';
@@ -17,9 +13,8 @@ import {PresetsComponent} from '../views/presets/presets.component';
 import {TipsTricksComponent} from '../views/tips-tricks/tips-tricks.component';
 import {AboutVent2uComponent} from '../views/about-vent2u/about-vent2u.component';
 
-// Remember to import the modules like the NgModule^ above
-
 // This holds the route definitions - If the path is empty it will redirect to the home component
+// @ts-ignore
 const routes: Routes = [
   {path: 'about-vent2u', component: AboutVent2uComponent},
   {path: 'app-settings', component: AppSettingsComponent},
@@ -50,11 +45,9 @@ const routes: Routes = [
     AboutVent2uComponent,
   ],
   imports: [
-    MatSliderModule,
     RouterModule.forRoot(routes)
   ],
   exports: [
-    MatSliderModule,
     LoginComponent,
     StartupSelectSpotComponent,
     StartupSelectSettingsComponent,
