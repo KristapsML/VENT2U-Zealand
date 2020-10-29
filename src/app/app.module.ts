@@ -2,11 +2,10 @@ import {BrowserModule} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {MaterialModule} from './material/material.module';
+import {MaterialModule} from './modules/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Routes, RouterModule} from '@angular/router';
-// Importing HomeComponent to test routing - we can rename it according to our need
-import {HomeComponent} from './views/home/home.component';
+
 // Importing SliderComponent to experiment with sliders in app
 import {SliderComponent} from './components/slider/slider.component';
 import {LoginComponent} from './views/login/login.component';
@@ -53,46 +52,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { SelectSpotQrReaderComponent } from './components/select-spot-qr-reader/select-spot-qr-reader.component';
 import { PresetDeleteModalComponent } from './components/preset/preset-delete-modal/preset-delete-modal.component';
 import {PreviousRouteService} from './services/previous-route.service';
-
-// This holds the route definitions - If the path is empty it will redirect to the home component
-const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'about-vent2u', component: AboutVent2uComponent},
-  {path: 'app-settings', component: AppSettingsComponent},
-  {path: 'current-settings', component: CurrentSettingsComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'presets', component: PresetsComponent},
-  {path: 'select-spot', component: SelectSpotComponent},
-  {path: 'startup-overview', component: StartupOverviewComponent},
-  {path: 'startup-select-settings', component: StartupSelectSettingsComponent},
-  {path: 'startup-select-spot', component: StartupSelectSpotComponent},
-  {path: 'startup-select-time', component: StartupSelectTimeComponent},
-  {path: 'tips-tricks', component: TipsTricksComponent},
-  {path: '**', redirectTo: '/login'} // When no route is defined, the app will display the login page.
-];
+import {ViewsModule} from './modules/views.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     SliderComponent,
-    LoginComponent,
-    StartupSelectSpotComponent,
-    StartupSelectSettingsComponent,
-    StartupSelectTimeComponent,
-    StartupOverviewComponent,
-    CurrentSettingsComponent,
-    SelectSpotComponent,
-    AppSettingsComponent,
-    PresetsComponent,
     TopNavComponent,
     BottomNavComponent,
     InputWSubmitComponent,
     PresetComponent,
     StartupTimeSuggestionComponent,
     AppSettingComponent,
-    TipsTricksComponent,
-    AboutVent2uComponent,
     StartupSelectionComponent,
     SettingOverviewComponent,
     StartupSelectSpotModalComponent,
@@ -119,8 +90,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     MaterialModule,
+    ViewsModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
     ReactiveFormsModule,
     MatButtonModule,
     FormsModule
