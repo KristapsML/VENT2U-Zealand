@@ -4,25 +4,25 @@
 
 <div class="grid_2_col">
 
-  <app-startup-time-suggestion routerLink="{{ this.routerDest }}">
+  <app-startup-time-suggestion>
     <div class="card_large_text">
       11:30
     </div>
   </app-startup-time-suggestion>
 
-  <app-startup-time-suggestion routerLink="{{ this.routerDest }}">
+  <app-startup-time-suggestion>
     <div class="card_large_text">
       13:00
     </div>
   </app-startup-time-suggestion>
 
-  <app-startup-time-suggestion routerLink="{{ this.routerDest }}">
+  <app-startup-time-suggestion>
     <div class="card_large_text">
       13:55
     </div>
   </app-startup-time-suggestion>
 
-  <app-startup-time-suggestion routerLink="{{ this.routerDest }}">
+  <app-startup-time-suggestion>
     <div class="card_large_text">
       14:50
     </div>
@@ -36,6 +36,6 @@
   inputLabel: 'Another time',
   placeholder: 'Insert another time',
   buttonText: 'Save time',
-  routerDest: this.routerDest
+  routerDest: '/current-settings'
   }"
 ></app-input-w-submit-button>
