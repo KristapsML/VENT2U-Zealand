@@ -22,16 +22,15 @@ export class InputWSubmitComponent implements OnInit {
     Validators.email,
   ]);
 
-  matcher = new MyErrorStateMatcher();
 
-  /* passwordFormControl = new FormControl('', [
+
+  passwordFormControl = new FormControl('', [
     Validators.required,
-    Validators.password,
   ]);
 
   matcher = new MyErrorStateMatcher();
 
-*/
+
   constructor() { }
 
   ngOnInit(): void {
