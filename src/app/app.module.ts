@@ -17,7 +17,6 @@ import {AppSettingsComponent} from './views/app-settings/app-settings.component'
 import {PresetsComponent} from './views/presets/presets.component';
 import {TopNavComponent} from './components/top-nav/top-nav.component';
 import {BottomNavComponent} from './components/bottom-nav/bottom-nav.component';
-import {InputWSubmitComponent} from './components/input-w-submit/input-w-submit.component';
 import {PresetComponent} from './components/preset/preset.component';
 import {StartupTimeSuggestionComponent} from './components/startup-time-suggestion/startup-time-suggestion.component';
 import {AppSettingComponent} from './components/app-setting/app-setting.component';
@@ -46,6 +45,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { SelectSpotQrReaderComponent } from './components/select-spot-qr-reader/select-spot-qr-reader.component';
 import { PresetDeleteModalComponent } from './components/preset/preset-delete-modal/preset-delete-modal.component';
 import {PreviousRouteService} from './services/previous-route.service';
+import { LoginModalComponent } from './views/login/login-modal/login-modal.component';
 
 // This holds the route definitions - If the path is empty it will redirect to the LoginComponent
 const routes: Routes = [
@@ -74,7 +74,6 @@ const routes: Routes = [
     PresetsComponent,
     TopNavComponent,
     BottomNavComponent,
-    InputWSubmitComponent,
     PresetComponent,
     StartupTimeSuggestionComponent,
     AppSettingComponent,
@@ -97,7 +96,8 @@ const routes: Routes = [
     SelectSpotPinModalComponent,
     SelectSpotQrModalComponent,
     SelectSpotQrReaderComponent,
-    PresetDeleteModalComponent
+    PresetDeleteModalComponent,
+    LoginModalComponent
   ],
   imports: [
     BrowserModule,

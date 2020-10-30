@@ -28,7 +28,6 @@ export class BottomNavComponent implements OnInit {
   }
 
   previousPage() {
-    console.log('Going back');
     this.location.back();
   }
 

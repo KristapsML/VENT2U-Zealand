@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputWSubmitComponent } from './input-w-submit.component';
+import { LoginModalComponent } from './login-modal.component';
 
-describe('InputWSubmitComponent', () => {
-  let component: InputWSubmitComponent;
-  let fixture: ComponentFixture<InputWSubmitComponent>;
+describe('LoginModalComponent', () => {
+  let component: LoginModalComponent;
+  let fixture: ComponentFixture<LoginModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InputWSubmitComponent ]
+      declarations: [ LoginModalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InputWSubmitComponent);
+    fixture = TestBed.createComponent(LoginModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
