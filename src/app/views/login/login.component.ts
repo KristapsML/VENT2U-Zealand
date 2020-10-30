@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     Validators.email,
   ]);
 
-
+  hide = true;
 
   passwordFormControl = new FormControl('', [
     Validators.required,
