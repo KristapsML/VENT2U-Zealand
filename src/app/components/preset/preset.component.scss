@@ -1,6 +1,7 @@
 mat-card {
   background-color: rgb(var(--main-color-300));
   margin-bottom: calc(var(--main-margin)/2);
+  cursor: pointer;
 }
 
 .selected_preset {
