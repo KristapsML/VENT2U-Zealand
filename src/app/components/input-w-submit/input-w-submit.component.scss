@@ -19,3 +19,11 @@
 .top-padding-button {
   margin-top: 0.5rem;
 }
+
+.flex-container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+}
