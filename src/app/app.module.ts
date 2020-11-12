@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {MaterialModule} from './material/material.module';
@@ -106,7 +107,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     UsersService,

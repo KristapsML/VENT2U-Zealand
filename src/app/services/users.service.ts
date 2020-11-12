@@ -1,51 +1,34 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+const baseUrl = 'http://localhost:8080/api/users';
+
+@Injectable({
+  providedIn: 'root'
+})
+
 export class UsersService {
-  getUsers() {
-    return [
-      {
-        id: 1,
-        email: 'user@edu.easj.dk',
-        password: 'password123',
-        name: 'Jane Doe',
-        settings: [
-          {
-            canReturnToSpot: true,
-            canReturnToSettings: false
-          }
-        ],
-        userPresets: [
-          {
-            name: 'Amazon feeling',
-            temperature: {
-              value: 32,
-              active: true
-            },
-            humidity: {
-              value: 80,
-              active: true
-            },
-            airflow: {
-              value: 4,
-              active: true
-            }
-          },
-          {
-            name: 'My cold settings',
-            temperature: {
-              value: 22.3,
-              active: true
-            },
-            humidity: {
-              value: 45,
-              active: true
-            },
-            airflow: {
-              value: 2,
-              active: false
-            }
-          }
-        ]
-      }
-    ]
-      ;
+  constructor(private http: HttpClient) { }
+  getAll() {
+    return this.http.get(baseUrl);
   }
+
+  // get(id) {
+  //   return this.http.get(`${baseUrl}/${id}`);
+  // }
+  // create(data) {
+  //   return this.http.post(baseUrl, data);
+  // }
+  update(id, data) {
+    return this.http.put(`${baseUrl}/${id}`, data);
+  }
+  // delete(id) {
+  //   return this.http.delete(`${baseUrl}/${id}`);
+  // }
+  // deleteAll() {
+  //   return this.http.delete(baseUrl);
+  // }
+  // findByTitle(title) {
+  //   return this.http.get(`${baseUrl}?title=${title}`);
+  // }
 }
