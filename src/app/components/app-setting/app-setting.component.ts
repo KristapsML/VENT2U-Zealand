@@ -50,7 +50,6 @@ export class AppSettingComponent implements OnInit {
         error => {
           console.log(error);
         });
-
   }
 
 }
