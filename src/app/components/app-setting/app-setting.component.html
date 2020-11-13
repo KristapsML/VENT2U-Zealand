@@ -5,7 +5,8 @@
 
   <mat-slide-toggle
   color="primary"
-  checked="checked"
+  [(ngModel)]="toggleValue"
+  (ngModelChange)="this.updateSetting(users[0].userId)"
   ></mat-slide-toggle>
 
 </div>

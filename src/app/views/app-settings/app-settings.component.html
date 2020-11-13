@@ -2,7 +2,10 @@
   App settings
 </h1>
 
-<app-app-setting>
+<!-- Setting for asking for previous spot on startup -->
+<app-app-setting [props]="{
+        setting: 'askLastSpot'
+        }">
   <div class="setting_text">
     Ask me if I have returned to my previous spot
   </div>
