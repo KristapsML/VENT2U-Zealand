@@ -22,7 +22,6 @@ import {PresetComponent} from './components/preset/preset.component';
 import {StartupTimeSuggestionComponent} from './components/startup-time-suggestion/startup-time-suggestion.component';
 import {AppSettingComponent} from './components/app-setting/app-setting.component';
 import {UsersService} from './services/users.service';
-import {StandardPresetsService} from './services/standard-presets.service';
 import {TipsTricksComponent} from './views/tips-tricks/tips-tricks.component';
 import {AboutVent2uComponent} from './views/about-vent2u/about-vent2u.component';
 import {StartupSelectionComponent} from './components/startup-selection/startup-selection.component';
@@ -47,6 +46,7 @@ import { SelectSpotQrReaderComponent } from './components/select-spot-qr-reader/
 import { PresetDeleteModalComponent } from './components/preset/preset-delete-modal/preset-delete-modal.component';
 import {PreviousRouteService} from './services/previous-route.service';
 import { LoginModalComponent } from './views/login/login-modal/login-modal.component';
+import {SpotsService} from './services/spots.service';
 
 // This holds the route definitions - If the path is empty it will redirect to the LoginComponent
 const routes: Routes = [
@@ -112,7 +112,7 @@ const routes: Routes = [
   ],
   providers: [
     UsersService,
-    StandardPresetsService,
+    SpotsService,
     PreviousRouteService
   ],
   bootstrap: [AppComponent],

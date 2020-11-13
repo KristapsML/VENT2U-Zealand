@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {StartupSelectSpotModalComponent} from './startup-select-spot-modal/startup-select-spot-modal.component';
 import {UsersService} from '../../services/users.service';
+import {SpotsService} from '../../services/spots.service';
 
 @Component({
   selector: 'app-startup-select-spot',
@@ -14,6 +15,7 @@ export class StartupSelectSpotComponent implements OnInit {
 
   constructor(
     private usersService: UsersService,
+    private spotsService: SpotsService,
     public dialog: MatDialog
   ) {
   }
@@ -24,7 +26,6 @@ export class StartupSelectSpotComponent implements OnInit {
 
   ngOnInit() {
     this.retrieveUsers();
-    this.currentUser = this.users[1];
   }
 
   retrieveUsers() {
@@ -39,8 +40,21 @@ export class StartupSelectSpotComponent implements OnInit {
         });
   }
 
+  // Updates lastSpotId in the user, and
+  // adds the user to userId in the spot
   updateSpot(userId, spotId) {
+    // Updates lastSpotId in User
     this.usersService.update(userId, {lastSpotId: spotId})
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+
+    // Updates userId in Spot
+    this.spotsService.update(spotId, {userId: userId})
       .subscribe(
         response => {
           console.log(response);
