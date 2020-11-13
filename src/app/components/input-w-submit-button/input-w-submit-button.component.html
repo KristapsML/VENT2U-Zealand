@@ -1,25 +1,27 @@
 <form [formGroup]="form">
 
-    <mat-form-field class="example-full-width">
-        <mat-label>{{ props.inputLabel }}</mat-label>
-        <textarea 
-        matInput 
-        class="form-control" 
-        formControlName="timeInput" 
-        placeholder="{{ props.placeholder }}">
+  <mat-form-field class="example-full-width">
+    <mat-label>{{ props.inputLabel }}</mat-label>
+    <textarea
+      matInput
+      class="form-control"
+      formControlName="timeInput"
+      [(ngModel)]="inputValue"
+      placeholder="{{ props.placeholder }}">
         </textarea>
-    </mat-form-field>
+  </mat-form-field>
 
-    <div class="align_right">
-        <button 
-        mat-raised-button 
-        mat-dialog-close 
-        *ngIf="form.controls.timeInput.valid" 
-        class="uppercase" 
-        color="primary" 
-        routerLink="{{ props.routerDest }}">
-    {{ props.buttonText }}
-  </button>
-    </div>
+  <div class="align_right">
+    <button
+      (click)="props.clickFunction === 'updateTime' && updateTime(users[0].userId, inputValue)"
+      mat-raised-button
+      mat-dialog-close
+      *ngIf="form.controls.timeInput.valid"
+      class="uppercase"
+      color="primary"
+      routerLink="{{ props.routerDest }}">
+      {{ props.buttonText }}
+    </button>
+  </div>
 
 </form>

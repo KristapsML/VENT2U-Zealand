@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {UsersService} from '../../services/users.service';
 
 @Component({
   selector: 'app-input-w-submit-button',
@@ -9,7 +10,12 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 export class InputWSubmitButtonComponent implements OnInit {
 
-  constructor() {
+  inputValue: string;
+
+  users = {};
+
+  constructor(
+    private usersService: UsersService) {
   }
 
   form = new FormGroup({
@@ -21,10 +27,38 @@ export class InputWSubmitButtonComponent implements OnInit {
     inputLabel: string,
     placeholder: string,
     buttonText: string,
-    routerDest: string
+    routerDest: string,
+    clickFunction: string
   };
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.retrieveUsers();
+  }
+
+  retrieveUsers() {
+    this.usersService.getAll()
+      .subscribe(
+        data => {
+          this.users = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  updateTime(userId, time) {
+    // Updates leavingTime in User
+    this.usersService.update(userId, {leavingTime: time})
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+
+    console.log('updating:', userId, time);
   }
 
 }
