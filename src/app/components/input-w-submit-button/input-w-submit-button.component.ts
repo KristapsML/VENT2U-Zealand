@@ -80,6 +80,16 @@ export class InputWSubmitButtonComponent implements OnInit {
   }
 
   updateSpot(userId, spotId) {
+    // Updates lastSpotId in User
+    this.usersService.update(userId, {lastSpotId: spotId})
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+
     //updates the userId in spots
     this.spotsService.update(spotId, {userId: userId})
       .subscribe(

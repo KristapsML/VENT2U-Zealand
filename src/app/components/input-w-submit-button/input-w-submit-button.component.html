@@ -13,7 +13,7 @@
 
   <div class="align_right">
     <button
-      (click)="props.clickFunction === 'updateTime' && updateTime(users[0].userId, inputValue)"
+      (click)="props.clickFunction === 'updateTime' && updateTime(users[0].userId, inputValue) || props.clickFunction === 'updateSpot' && updateSpot(users[0].userId, inputValue)"
       mat-raised-button
       mat-dialog-close
       *ngIf="form.controls.timeInput.valid"
