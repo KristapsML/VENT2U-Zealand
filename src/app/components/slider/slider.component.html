@@ -1,20 +1,20 @@
 <!-- Adding the slider and customizing it with ticks and tracking the slider's values-->
 <div class="slider">
-  <div class="sliderValue capitalize">{{props.title}}: {{sliderTemperature.value}}{{ props.unit }}</div>
+  <div class="sliderValue capitalize">{{props.setting}}: {{this.settingValue}}{{props.unit}}</div>
   <div
     *ngIf="!props.preview"
     class="current"
   >
-    Current {{props.title}}: {{ props.currentRoomValue }}{{props.unit}}
+    Current {{props.setting}}: {{props.currentRoomValue}}{{props.unit}}
   </div>
   <mat-slider
     [disabled]="this.keepAtRoomLevel || props.preview"
-      #sliderTemperature (change)="updateSetting($event)"
-      tickInterval="{{ props.interval }}"
-      step="{{ props.step }}"
-      min="{{ props.tempMin }}"
-      max="{{ props.tempMax }}"
-      [value]="props.currentValue">
+      tickInterval="{{props.interval}}"
+      step="{{props.step}}"
+      min="{{props.tempMin}}"
+      max="{{props.tempMax}}"
+      [(ngModel)]="settingValue"
+      (ngModelChange)="this.updateSetting(users[0].userId)">
   </mat-slider>
   <mat-checkbox
     [(ngModel)]="this.keepAtRoomLevel">
