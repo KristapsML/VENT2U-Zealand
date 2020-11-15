@@ -2,7 +2,7 @@
   Vent2Learn
 </div>
 <div class="form-container">
-  <form class="grid_2_col">
+  <form class="grid_2_col" action="auth" method="POST">
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
@@ -35,9 +35,5 @@
 
 <hr>
 
-<button
-  mat-button
-class="full_width uppercase"
-  color="primary"
-  (click)="openDialog()"
->Don't have, or forgot your login?</button>
+<button mat-button class="full_width uppercase" color="primary" (click)="openDialog()">Don't have, or forgot your
+  login?</button>
