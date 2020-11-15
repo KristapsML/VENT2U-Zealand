@@ -2,7 +2,7 @@
   Vent2Learn
 </div>
 <div class="form-container">
-  <form class="grid_2_col">
+  <form class="grid_2_col" action="auth" method="POST">
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
@@ -27,17 +27,12 @@
       </mat-error>
     </mat-form-field>
     <mat-card-actions>
-      <button mat-raised-button type="submit" color="primary" class="top-padding-button full_width"
-        [routerLink]="['/startup-select-spot']" routerLinkActive="router-link-active">LOG IN</button>
+      <button mat-raised-button type="submit" color="primary" class="top-padding-button full_width">LOG IN</button>
     </mat-card-actions>
   </form>
 </div>
 
 <hr>
 
-<button
-  mat-button
-class="full_width uppercase"
-  color="primary"
-  (click)="openDialog()"
->Don't have, or forgot your login?</button>
+<button mat-button class="full_width uppercase" color="primary" (click)="openDialog()">Don't have, or forgot your
+  login?</button>

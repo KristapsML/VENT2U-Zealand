@@ -1,71 +1,23 @@
-<!-- Adding the slider and customizing it with ticks and tracking the slider's values-->
+<!-- Adding the slider and tracking the slider's values-->
 <div class="slider">
-  <div class="sliderValue capitalize">{{props.title}}: {{sliderTemperature.value}}{{ props.unit }}</div>
+  <div class="sliderValue capitalize">{{props.setting}}: {{this.settingValue}}{{props.unit}}</div>
   <div
     *ngIf="!props.preview"
     class="current"
   >
-    Current {{props.title}}: {{ props.currentRoomValue }}{{props.unit}}
+    Current {{props.setting}}: {{this.spotValue}}{{props.unit}}
   </div>
   <mat-slider
     [disabled]="this.keepAtRoomLevel || props.preview"
-      #sliderTemperature (change)="updateSetting($event)"
-      tickInterval="{{ props.interval }}"
-      step="{{ props.step }}"
-      min="{{ props.tempMin }}"
-      max="{{ props.tempMax }}"
-      [value]="props.currentValue">
+      tickInterval="{{props.interval}}"
+      step="{{props.step}}"
+      min="{{props.tempMin}}"
+      max="{{props.tempMax}}"
+      [(ngModel)]="settingValue"
+      (ngModelChange)="this.updateSetting(users[0].userId)">
   </mat-slider>
   <mat-checkbox
     [(ngModel)]="this.keepAtRoomLevel">
     Keep at room level
   </mat-checkbox>
 </div>
-
-<!--<div>-->
-<!--    <div class="sliderValue">Temperature: {{sliderTemperature.value}}°</div>-->
-<!--    <div class="current">Current temperature: 25°</div>-->
-<!--    <mat-slider-->
-<!--        #sliderTemperature (change)="updateSetting($event)"-->
-<!--        tickInterval="5"-->
-<!--        step="1"-->
-<!--        min="0"-->
-<!--        max="40"-->
-<!--        [value]="sliderTemperature">-->
-<!--    </mat-slider>-->
-<!--    <mat-checkbox>-->
-<!--        Keep at room level-->
-<!--    </mat-checkbox>-->
-<!--</div>-->
-<!--<br>-->
-<!--<div>-->
-<!--    <div class="sliderValue">Humidity: {{sliderHumidity.value}}%</div>-->
-<!--    <div class="current">Current humidity: 37%</div>-->
-<!--    <mat-slider-->
-<!--        #sliderHumidity (change)="updateSetting($event)"-->
-<!--        tickInterval="5"-->
-<!--        step="1"-->
-<!--        min="0"-->
-<!--        max="100"-->
-<!--        [value]="sliderHumidity">-->
-<!--    </mat-slider>-->
-<!--    <mat-checkbox>-->
-<!--        Keep at room level-->
-<!--    </mat-checkbox>-->
-<!--</div>-->
-<!--<br>-->
-<!--<div>-->
-<!--    <div class="sliderValue">Airflow level: {{sliderAirflow.value}}</div>-->
-<!--    <div class="current">Current airflow level: 6</div>-->
-<!--    <mat-slider-->
-<!--        #sliderAirflow (change)="updateSetting($event)"-->
-<!--        tickInterval="1" -->
-<!--        step="1" -->
-<!--        min="0" -->
-<!--        max="10" -->
-<!--        [value]="sliderAirflow">-->
-<!--    </mat-slider>-->
-<!--    <mat-checkbox>-->
-<!--        Keep at room level-->
-<!--    </mat-checkbox>-->
-<!--</div>-->

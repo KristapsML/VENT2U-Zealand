@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
+import { SpotsService } from 'app/services/spots.service';
 import {UsersService} from '../../services/users.service';
 
 @Component({
@@ -13,9 +14,12 @@ export class InputWSubmitButtonComponent implements OnInit {
   inputValue: string;
 
   users = {};
+  spots = {};
 
   constructor(
-    private usersService: UsersService) {
+    private usersService: UsersService,
+    private spotsService: SpotsService
+    ) {
   }
 
   form = new FormGroup({
@@ -33,6 +37,7 @@ export class InputWSubmitButtonComponent implements OnInit {
 
   ngOnInit() {
     this.retrieveUsers();
+    this.retrieveSpots();
   }
 
   retrieveUsers() {
@@ -61,4 +66,30 @@ export class InputWSubmitButtonComponent implements OnInit {
     console.log('updating:', userId, time);
   }
 
+  retrieveSpots() {
+    this.spotsService.getAll()
+    .subscribe(
+    data => {
+      this.spots = data;
+      console.log(data);
+    },
+    error => {
+      console.log(error);
+    });
+    
+  }
+
+  updateSpot(userId, spotId) {
+    //updates the userId in spots
+    this.spotsService.update(spotId, {userId: userId})
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+
+    console.log('updating:', spotId, userId);    
+  }
 }
