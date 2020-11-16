@@ -1,12 +1,37 @@
-<mat-card>
+<ng-container *ngIf="users[0] && presets[0]">
+  {{ users[0].lastSpotId}}
+
+  {{ presets[0].name }}
+
+  <div *ngFor="let preset of presets">
+    <ng-container *ngIf="preset.userId == users[0].userId || preset.userId == null">
+      Presets
+      {{preset.name}}
+    </ng-container>
+  </div>
+
+  <mat-card>
     <mat-form-field appearance="none">
       <mat-select placeholder="Amazon feeling" [formControl]="presetsControl">
-        <mat-optgroup *ngFor="let group of presetsGroups" [label]="group.name"
-                  [disabled]="group.disabled">
-          <mat-option *ngFor="let presets of group.presets" [value]="presets.value">
-            {{presets.viewValue}}
-          </mat-option>
+
+        <mat-optgroup [label]="'Your presets'">
+          <ng-container *ngFor="let preset of presets">
+            <mat-option *ngIf="preset.userId == users[0].userId" [value]="preset.presetId">
+              {{preset.name}}
+            </mat-option>
+          </ng-container>
         </mat-optgroup>
+
+        <mat-optgroup [label]="'Standard presets'">
+          <ng-container *ngFor="let preset of presets">
+            <mat-option *ngIf="preset.userId == null" [value]="preset.presetId">
+              {{preset.name}}
+            </mat-option>
+          </ng-container>
+        </mat-optgroup>
+
       </mat-select>
     </mat-form-field>
-</mat-card>
+  </mat-card>
+
+</ng-container>

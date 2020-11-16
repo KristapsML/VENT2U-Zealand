@@ -47,6 +47,7 @@ import { PresetDeleteModalComponent } from './components/preset/preset-delete-mo
 import {PreviousRouteService} from './services/previous-route.service';
 import { LoginModalComponent } from './views/login/login-modal/login-modal.component';
 import {SpotsService} from './services/spots.service';
+import {PresetsService} from './services/presets.service';
 
 // This holds the route definitions - If the path is empty it will redirect to the LoginComponent
 const routes: Routes = [
@@ -113,6 +114,7 @@ const routes: Routes = [
   providers: [
     UsersService,
     SpotsService,
+    PresetsService,
     PreviousRouteService
   ],
   bootstrap: [AppComponent],
