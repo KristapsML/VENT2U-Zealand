@@ -1,14 +1,4 @@
 <ng-container *ngIf="users[0] && presets[0]">
-  {{ users[0].lastSpotId}}
-
-  {{ presets[0].name }}
-
-  <div *ngFor="let preset of presets">
-    <ng-container *ngIf="preset.userId == users[0].userId || preset.userId == null">
-      Presets
-      {{preset.name}}
-    </ng-container>
-  </div>
 
   <mat-card>
     <mat-form-field appearance="none">
