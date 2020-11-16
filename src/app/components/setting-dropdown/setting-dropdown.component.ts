@@ -31,6 +31,7 @@ export class SettingDropdownComponent implements OnInit {
     private presetsService: PresetsService) {
   }
 
+  presetsControl = new FormControl();
   users = {};
   presets = {};
 
@@ -62,26 +63,5 @@ export class SettingDropdownComponent implements OnInit {
           console.log(error);
         });
   }
-
-  // MOCK DATA
-
-  presetsControl = new FormControl();
-  presetsGroups: PresetsGroup[] = [
-    {
-      name: 'Your presets',
-      presets: [
-        {value: 'amazon-feeling', viewValue: 'Amazon feeling'},
-        {value: 'my-cold-settings', viewValue: 'My cold settings'}
-      ]
-    },
-    {
-      name: 'Standard presets',
-      presets: [
-        {value: 'this-room', viewValue: 'This room'},
-        {value: 'cold-humid', viewValue: 'Cold + humid'},
-        {value: 'quick-warm-up', viewValue: 'Quick warm up'}
-      ]
-    }
-  ];
 
 }

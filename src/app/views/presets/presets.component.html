@@ -1,58 +1,29 @@
-<h1>Presets</h1>
+<ng-container *ngIf="users[0] && presets[0]">
+  <h1>Presets</h1>
 
-<h2>My presets</h2>
+  <h2>My presets</h2>
 
-<app-preset
-  [props]="{
-preset: {
-title: 'Amazon feeling',
-category: 'myPresets',
-selected: true
-}
+  <ng-container *ngFor="let preset of presets">
+    <app-preset
+      *ngIf="preset.userId == users[0].userId"
+      [props]="{
+      presetId: preset.presetId,
+      category: 'myPresets',
+      lastDest: this.lastDest
   }"
-></app-preset>
+    ></app-preset>
+  </ng-container>
 
-<app-preset
-  [props]="{
-preset: {
-title: 'My cold settings',
-category: 'myPresets',
-selected: false
-},
-lastDest: this.lastDest
-  }"
-></app-preset>
+  <h2>Standard presets</h2>
 
-<h2 class="extra_margin">System presets</h2>
-<app-preset
-  [props]="{
-preset: {
-title: 'This room',
-category: 'systemPreset',
-selected: false
-},
-lastDest: this.lastDest
+  <ng-container *ngFor="let preset of presets">
+    <app-preset
+      *ngIf="preset.userId == null"
+      [props]="{
+      presetId: preset.presetId,
+      category: 'standardPresets',
+      lastDest: this.lastDest
   }"
-></app-preset>
-
-<app-preset
-  [props]="{
-preset: {
-title: 'Cold + humid',
-category: 'systemPreset',
-selected: false
-},
-lastDest: this.lastDest
-  }"
-></app-preset>
-
-<app-preset
-  [props]="{
-preset: {
-title: 'Quick warm up',
-category: 'systemPreset',
-selected: false
-},
-lastDest: this.lastDest
-  }"
-></app-preset>
+    ></app-preset>
+  </ng-container>
+</ng-container>

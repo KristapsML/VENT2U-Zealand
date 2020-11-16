@@ -1,13 +1,16 @@
+<ng-container *ngIf="presets[0]">
+  <ng-container *ngFor="let preset of presets">
+    <ng-container *ngIf="preset.presetId == props.presetId">
+
 <mat-card
   matRipple
   *ngIf="props"
   (click)="this.displaySettings = !this.displaySettings"
-  [class.selected_preset]="props.preset.selected"
 >
   <div
     class="preset_title"
   >
-    {{ props.preset.title }}
+    {{ preset.name }}
   </div>
 
   <div
@@ -16,7 +19,7 @@
   >
     <app-slider
       [props]="{
-  title: 'temperature',
+  setting: 'Temperature',
   unit: '&deg;',
   interval: 5,
   step: 1,
@@ -30,7 +33,7 @@
     ></app-slider>
     <app-slider
       [props]="{
-  title: 'humidity',
+  setting: 'Humidity',
   unit: '%',
   interval: 10,
   step: 1,
@@ -44,7 +47,7 @@
     ></app-slider>
     <app-slider
       [props]="{
-  title: 'airflow level',
+  setting: 'Airflow',
   unit: '',
   interval: 1,
   step: 1,
@@ -58,14 +61,14 @@
     ></app-slider>
 
 
-    <i
-      *ngIf="props.preset.selected"
-      >
-      This is your current preset.
-    </i>
+<!--    <i-->
+<!--      *ngIf="props.preset.selected"-->
+<!--      >-->
+<!--      This is your current preset.-->
+<!--    </i>-->
 
     <button
-      *ngIf="!props.preset.selected && props.lastDest === '/startup-select-settings'"
+      *ngIf="props.lastDest === '/startup-select-settings'"
       mat-raised-button
       class="full_width uppercase select_button"
       color="primary"
@@ -75,7 +78,7 @@
     </button>
 
     <button
-      *ngIf="!props.preset.selected && props.lastDest !== '/startup-select-settings'"
+      *ngIf="props.lastDest !== '/startup-select-settings'"
       mat-raised-button
       class="full_width uppercase select_button"
       color="primary"
@@ -85,11 +88,11 @@
     </button>
 
     <hr
-      *ngIf="!props.preset.selected  && props.preset.category === 'myPresets'"
+      *ngIf="props.category === 'myPresets'"
     >
 
     <button
-      *ngIf="!props.preset.selected && props.preset.category === 'myPresets'"
+      *ngIf="props.category === 'myPresets'"
       (click)="openDialog()"
       mat-button
       class="full_width uppercase"
@@ -101,3 +104,6 @@
   </div>
 
 </mat-card>
+    </ng-container>
+  </ng-container>
+</ng-container>

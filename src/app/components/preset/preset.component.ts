@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {PresetDeleteModalComponent} from './preset-delete-modal/preset-delete-modal.component';
 import {MatDialog} from '@angular/material/dialog';
+import {PresetsService} from '../../services/presets.service';
 
 @Component({
   selector: 'app-preset',
@@ -9,13 +10,18 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class PresetComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) {
+  presets = {};
+
+  constructor(
+    public dialog: MatDialog,
+              private presetsService: PresetsService) {
   }
 
   displaySettings = false;
 
   @Input() props: {
-    preset: object,
+    presetId: number,
+    category: string,
     lastDest: string
   };
 
@@ -24,7 +30,21 @@ export class PresetComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.retrievePresets();
     console.log(this.props.lastDest);
+  }
+
+  retrievePresets() {
+    this.presetsService.getAll()
+      .subscribe(
+        data => {
+          this.presets = data;
+
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 }
