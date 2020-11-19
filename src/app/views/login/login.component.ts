@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
-import {StartupSelectSpotModalComponent} from '../startup-select-spot/startup-select-spot-modal/startup-select-spot-modal.component';
-import {LoginModalComponent} from './login-modal/login-modal.component';
-import {MatDialog} from '@angular/material/dialog';
-import {HttpClient} from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { StartupSelectSpotModalComponent } from '../startup-select-spot/startup-select-spot-modal/startup-select-spot-modal.component';
+import { LoginModalComponent } from './login-modal/login-modal.component';
+import { MatDialog } from '@angular/material/dialog';
+import { HttpClient } from '@angular/common/http';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   constructor(public dialog: MatDialog,
-              private http: HttpClient) {
+    private http: HttpClient) {
   }
 
   formGroup = new FormControl({
@@ -58,10 +58,10 @@ export class LoginComponent implements OnInit {
       email: this.userEmail,
       password: this.userPassword
     };
-    // const email = this.formGroup.get('email').value;
-    // const password = this.formGroup.get('password').value;
-    // formData.append('email', this.userEmail);
-    // formData.append('password', this.userPassword);
+    const email = this.formGroup.get('email').value;
+    const password = this.formGroup.get('password').value;
+    formData.append('email', this.userEmail);
+    formData.append('password', this.userPassword);
 
     console.log(formData);
 

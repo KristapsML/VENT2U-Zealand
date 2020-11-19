@@ -5,10 +5,7 @@
   <form class="grid_2_col" action="auth" method="POST" [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
-      <input matInput
-             [formControl]="emailFormControl"
-             [errorStateMatcher]="matcher"
-             [(ngModel)]="userEmail"
+      <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" [(ngModel)]="userEmail"
         placeholder="Ex. JaneDoe@zealand.dk">
       <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
         Please enter a valid email address
@@ -19,10 +16,7 @@
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Password</mat-label>
-      <input matInput
-             [formControl]="passwordFormControl"
-             [errorStateMatcher]="matcher"
-             [(ngModel)]="userPassword"
+      <input matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher" [(ngModel)]="userPassword"
         placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">
@@ -33,7 +27,9 @@
       </mat-error>
     </mat-form-field>
     <mat-card-actions>
-      <button mat-raised-button type="submit" color="primary" class="top-padding-button full_width">LOG IN</button>
+      <button mat-raised-button type="submit" color="primary" class="top-padding-button full_width"
+        [routerLink]="['/startup-select-spot']" routerLinkActive="router-link-active" (click)="submitForm()">LOG
+        IN</button>
     </mat-card-actions>
   </form>
 </div>

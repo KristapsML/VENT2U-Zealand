@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {MatDialog} from '@angular/material/dialog';
-import {UsersService} from '../../services/users.service';
-import {SpotsService} from '../../services/spots.service';
-import {PresetsService} from '../../services/presets.service';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { UsersService } from '../../services/users.service';
+import { SpotsService } from '../../services/spots.service';
+import { PresetsService } from '../../services/presets.service';
+import { Router } from '@angular/router';
 
 interface Presets {
   value: string;
@@ -75,9 +75,9 @@ export class SettingDropdownComponent implements OnInit {
 
     // Updates Temperature setting in User
     this.usersService.update(userId, {
-      userTemperature: this.selectedPreset.temperature,
-      userHumidity: this.selectedPreset.humidity,
-      userAirflow: this.selectedPreset.airflow
+      userTemperature: this.selectedPreset.Temperature,
+      userHumidity: this.selectedPreset.Humidity,
+      userAirflow: this.selectedPreset.Airflow
     })
       .subscribe(
         response => {
