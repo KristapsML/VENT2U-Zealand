@@ -71,11 +71,6 @@ export class SliderComponent implements OnInit {
         });
   }
 
-  disableSlider() {
-    this.keepAtRoomLevel = !this.keepAtRoomLevel;
-    console.log(this.keepAtRoomLevel);
-  }
-
   updateSetting(userId) {
     // Updates setting in User
     this.usersService.update(userId, {[this.userSetting]: this.settingValue})

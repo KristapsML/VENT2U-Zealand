@@ -2,11 +2,16 @@
 
   <mat-card>
     <mat-form-field appearance="none">
-      <mat-select placeholder="Perfect temperature" [formControl]="presetsControl">
+      <mat-select
+        placeholder="Perfect temperature"
+        [formControl]="presetsControl"
+        [(ngModel)]="selectedPreset"
+        (ngModelChange)="updateUserSettings(users[0].userId)"
+      >
 
         <mat-optgroup [label]="'Your presets'">
           <ng-container *ngFor="let preset of presets">
-            <mat-option *ngIf="preset.userId == users[0].userId" [value]="preset.presetId">
+            <mat-option *ngIf="preset.userId == users[0].userId" [value]="preset">
               {{preset.name}}
             </mat-option>
           </ng-container>
@@ -14,7 +19,7 @@
 
         <mat-optgroup [label]="'Standard presets'">
           <ng-container *ngFor="let preset of presets">
-            <mat-option *ngIf="preset.userId == null" [value]="preset.presetId">
+            <mat-option *ngIf="preset.userId == null" [value]="preset">
               {{preset.name}}
             </mat-option>
           </ng-container>

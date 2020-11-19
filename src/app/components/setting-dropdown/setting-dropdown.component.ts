@@ -4,6 +4,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {UsersService} from '../../services/users.service';
 import {SpotsService} from '../../services/spots.service';
 import {PresetsService} from '../../services/presets.service';
+import {Router} from '@angular/router';
 
 interface Presets {
   value: string;
@@ -24,11 +25,14 @@ interface PresetsGroup {
 
 export class SettingDropdownComponent implements OnInit {
 
+  selectedPreset: object;
+
   constructor(
     public dialog: MatDialog,
     private usersService: UsersService,
     private spotsService: SpotsService,
-    private presetsService: PresetsService) {
+    private presetsService: PresetsService,
+    private router: Router) {
   }
 
   presetsControl = new FormControl();
@@ -39,6 +43,7 @@ export class SettingDropdownComponent implements OnInit {
     this.retrieveUsers();
     this.retrievePresets();
   }
+
   retrieveUsers() {
     this.usersService.getAll()
       .subscribe(
@@ -64,4 +69,25 @@ export class SettingDropdownComponent implements OnInit {
         });
   }
 
+  updateUserSettings(userId) {
+
+    console.log(this.selectedPreset.temperature);
+
+    // Updates Temperature setting in User
+    this.usersService.update(userId, {
+      userTemperature: this.selectedPreset.temperature,
+      userHumidity: this.selectedPreset.humidity,
+      userAirflow: this.selectedPreset.airflow
+    })
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+
+    window.location.href = window.location.href
+
+  }
 }
