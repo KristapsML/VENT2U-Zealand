@@ -17,7 +17,7 @@
       (ngModelChange)="this.updateSetting(users[0].userId)">
   </mat-slider>
   <mat-checkbox
-    *ngIf="!props.preview || this.keepAtRoomLevel"
+    *ngIf="!props.preview || this.settingValue === null"
     [(ngModel)]="this.keepAtRoomLevel">
     Keep at room level
   </mat-checkbox>

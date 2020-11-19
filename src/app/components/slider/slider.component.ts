@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { UsersService } from 'app/services/users.service';
-import { SpotsService } from 'app/services/spots.service';
+import {UsersService} from 'app/services/users.service';
+import {SpotsService} from 'app/services/spots.service';
+import {PresetsService} from '../../services/presets.service';
 
 @Component({
   selector: 'app-slider',
@@ -12,13 +13,18 @@ export class SliderComponent implements OnInit {
 
   users = {};
   settingValue: number;
-  userSetting: string;
   toggleValue: boolean;
   keepAtRoomLevel = null;
 
   spots = {};
   spotValue: number;
+
+  presets = {};
+
+  // Props for changing the setting in user- and spot tables
+  userSetting: string;
   spotSetting: string;
+  presetSetting: string;
 
   @Input() props: {
     setting: string,
@@ -30,16 +36,24 @@ export class SliderComponent implements OnInit {
     keepAtRoomLevel: boolean,
     currentValue: number,
     currentRoomValue: number,
-    preview: boolean
+    preview: boolean,
+    presetId: number
   };
 
-  constructor(private usersService: UsersService, private spotsService: SpotsService) { }
+  constructor(
+    private usersService: UsersService,
+    private spotsService: SpotsService,
+    private presetService: PresetsService
+  ) {
+  }
 
   ngOnInit() {
-      this.retrieveUsers();
-      this.userSetting = 'user'.concat(this.props.setting);
-      this.retrieveSpots();
-      this.spotSetting = 'curr'.concat(this.props.setting);
+    this.retrieveUsers();
+    this.userSetting = 'user'.concat(this.props.setting);
+    this.retrieveSpots();
+    this.spotSetting = 'curr'.concat(this.props.setting);
+    this.retrievePresets();
+    this.presetSetting = this.props.setting.toLowerCase();
   }
 
   retrieveUsers() {
@@ -47,8 +61,16 @@ export class SliderComponent implements OnInit {
       .subscribe(
         data => {
           this.users = data;
-          this.settingValue = this.users[0][this.userSetting];
-          this.toggleValue = this.users[0][this.userSetting];
+
+          if (this.props.preview === false) {
+            this.settingValue = this.users[0][this.userSetting];
+            this.toggleValue = this.users[0][this.userSetting];
+
+            if (this.settingValue === null) {
+              this.keepAtRoomLevel = true;
+            }
+
+          }
 
           console.log(data);
         },
@@ -63,6 +85,31 @@ export class SliderComponent implements OnInit {
         data => {
           this.spots = data;
           this.spotValue = this.spots[0][this.spotSetting];
+
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  retrievePresets() {
+    this.presetService.getAll()
+      .subscribe(
+        data => {
+          this.presets = data;
+
+          if (this.props.preview === true) {
+            this.presets.forEach(preset => {
+              if (preset.presetId === this.props.presetId) {
+                this.settingValue = preset[this.presetSetting];
+              }
+            });
+          }
+
+          if (this.settingValue === null) {
+            this.keepAtRoomLevel = true;
+          }
 
           console.log(data);
         },
