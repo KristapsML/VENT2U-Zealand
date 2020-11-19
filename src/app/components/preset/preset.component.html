@@ -75,6 +75,7 @@
       mat-raised-button
       class="full_width uppercase select_button"
       color="primary"
+      (click)="updateUserSettings(users[0].userId)"
       routerLink="/startup-select-time"
     >
       Select this preset
@@ -85,6 +86,7 @@
       mat-raised-button
       class="full_width uppercase select_button"
       color="primary"
+      (click)="updateUserSettings(users[0].userId)"
       routerLink="/current-settings"
     >
       Select this preset

@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {PresetDeleteModalComponent} from './preset-delete-modal/preset-delete-modal.component';
 import {MatDialog} from '@angular/material/dialog';
 import {PresetsService} from '../../services/presets.service';
+import {UsersService} from '../../services/users.service';
 
 @Component({
   selector: 'app-preset',
@@ -10,11 +11,13 @@ import {PresetsService} from '../../services/presets.service';
 })
 export class PresetComponent implements OnInit {
 
+  users = {};
   presets = {};
 
   constructor(
     public dialog: MatDialog,
-              private presetsService: PresetsService) {
+    private usersService: UsersService,
+    private presetsService: PresetsService) {
   }
 
   displaySettings = false;
@@ -30,16 +33,16 @@ export class PresetComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.retrieveUsers();
     this.retrievePresets();
     console.log(this.props.lastDest);
   }
 
-  retrievePresets() {
-    this.presetsService.getAll()
+  retrieveUsers() {
+    this.usersService.getAll()
       .subscribe(
         data => {
-          this.presets = data;
-
+          this.users = data;
           console.log(data);
         },
         error => {
@@ -47,4 +50,35 @@ export class PresetComponent implements OnInit {
         });
   }
 
+  retrievePresets() {
+    this.presetsService.getAll()
+      .subscribe(
+        data => {
+          this.presets = data;
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  updateUserSettings(userId) {
+    this.presets.forEach(preset => {
+      if (preset.presetId === this.props.presetId) {
+
+        this.usersService.update(userId, {
+          userTemperature: preset.temperature,
+          userHumidity: preset.humidity,
+          userAirflow: preset.airflow
+        })
+          .subscribe(
+            response => {
+              console.log(response);
+            },
+            error => {
+              console.log(error);
+            });
+      }
+    });
+
+  }
 }
